@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C2E1F0218BDE0B3001FC8F3 /* BooksViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2E1F0118BDE0B3001FC8F3 /* BooksViewCell.m */; };
+		0C2E1F0518BDE6FB001FC8F3 /* BooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2E1F0418BDE6FB001FC8F3 /* BooksViewController.m */; };
 		0CAD61D418583C0500178F04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAD61D318583C0500178F04 /* Foundation.framework */; };
 		0CAD61D618583C0500178F04 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAD61D518583C0500178F04 /* CoreGraphics.framework */; };
 		0CAD61D818583C0500178F04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAD61D718583C0500178F04 /* UIKit.framework */; };
@@ -43,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C2E1F0018BDE0B3001FC8F3 /* BooksViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BooksViewCell.h; sourceTree = "<group>"; };
+		0C2E1F0118BDE0B3001FC8F3 /* BooksViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BooksViewCell.m; sourceTree = "<group>"; };
+		0C2E1F0318BDE6FB001FC8F3 /* BooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BooksViewController.h; sourceTree = "<group>"; };
+		0C2E1F0418BDE6FB001FC8F3 /* BooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BooksViewController.m; sourceTree = "<group>"; };
 		0CAD61D018583C0500178F04 /* PrototypeDokuho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrototypeDokuho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CAD61D318583C0500178F04 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0CAD61D518583C0500178F04 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -136,6 +142,10 @@
 				0CAD61E518583C0500178F04 /* Main.storyboard */,
 				0CAF134B185AF65E00BCCE83 /* BooksView.h */,
 				0CAF134C185AF65E00BCCE83 /* BooksView.m */,
+				0C2E1F0318BDE6FB001FC8F3 /* BooksViewController.h */,
+				0C2E1F0418BDE6FB001FC8F3 /* BooksViewController.m */,
+				0C2E1F0018BDE0B3001FC8F3 /* BooksViewCell.h */,
+				0C2E1F0118BDE0B3001FC8F3 /* BooksViewCell.m */,
 				0CAD61E818583C0500178F04 /* ViewController.h */,
 				0CAD61E918583C0500178F04 /* ViewController.m */,
 				0CAD61EB18583C0500178F04 /* Images.xcassets */,
@@ -236,6 +246,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "梁島 啓多";
 				TargetAttributes = {
+					0CAD61CF18583C0500178F04 = {
+						DevelopmentTeam = K45ES832VB;
+					};
 					0CAD61F018583C0500178F04 = {
 						TestTargetID = 0CAD61CF18583C0500178F04;
 					};
@@ -295,9 +308,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CAD61EA18583C0500178F04 /* ViewController.m in Sources */,
+				0C2E1F0518BDE6FB001FC8F3 /* BooksViewController.m in Sources */,
 				0CAD61E418583C0500178F04 /* AppDelegate.m in Sources */,
 				0CAD61E018583C0500178F04 /* main.m in Sources */,
 				0CAF134D185AF65E00BCCE83 /* BooksView.m in Sources */,
+				0C2E1F0218BDE0B3001FC8F3 /* BooksViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +379,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -403,6 +419,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -424,11 +441,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PrototypeDokuho/PrototypeDokuho-Prefix.pch";
 				INFOPLIST_FILE = "PrototypeDokuho/PrototypeDokuho-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -439,11 +459,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PrototypeDokuho/PrototypeDokuho-Prefix.pch";
 				INFOPLIST_FILE = "PrototypeDokuho/PrototypeDokuho-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
