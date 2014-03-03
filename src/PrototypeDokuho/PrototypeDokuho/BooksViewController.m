@@ -44,30 +44,35 @@
 
 - (void)loadTestPhotos {
     
-    NSMutableArray *Images = [NSMutableArray array];
+    NSMutableArray *images = [NSMutableArray array];
     for (int i = 1; i <= 8; i++) {
         NSString *filename = [NSString stringWithFormat:@"bookImage%d.jpg", i];
-        [Images addObject:[UIImage imageNamed:filename]];
+        [images addObject:[UIImage imageNamed:filename]];
     }
     
-    self.bookImages = @[Images];
+    self.bookImages = @[images];
 }
 
+// Delegate Method
+// セクション数の指定
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return self.bookImages.count;
+}
+
+// セクションに応じたセルの数を返す
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return [[self.bookImages objectAtIndex:section] count];
 }
 
+// セルオブジェクトを返す
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
     BooksViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MY_CELL" forIndexPath:indexPath];
-    
     cell.imageView.image = [[self.bookImages objectAtIndex:indexPath.section] objectAtIndex:indexPath.item];
+    
     return cell;
 }
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return [self.bookImages count];
-}
 
 
 @end
