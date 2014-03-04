@@ -7,9 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "RegistrationViewController.h"
 
 @interface ViewController ()
-
 
 @end
 
@@ -19,13 +19,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    [self.buttonCamera addTarget:self
-               action:@selector(clickButtonCamera:)
-     forControlEvents:UIControlEventTouchUpInside];
-    
     [self.buttonRegistration addTarget:self
                           action:@selector(clickButtonRegistration:)
                 forControlEvents:UIControlEventTouchUpInside];
+    
+    NSLog(@"%@", self.navigationController.topViewController);
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,15 +37,12 @@
     switch (buttonIndex) {
         case 0:
             // １番目のボタンが押されたときの処理を記述する
-            NSLog(@"buttton0");
             break;
         case 1:
             // ２番目のボタンが押されたときの処理を記述する
-            NSLog(@"buttton1");
-            break;
-        case 2:
-            // ３番目のボタンが押されたときの処理を記述する
-            NSLog(@"buttton2");
+        {
+            [self openPicker:UIImagePickerControllerSourceTypeCamera];
+        }
             break;
     }
 }
@@ -64,11 +60,11 @@
 // camera起動
 // アラートの表示
 - (void)showAlert:(NSString *)title text:(NSString *)text {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
-                                                    message:text
-                                                   delegate:nil
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
+    UIAlertView *alert = [UIAlertView.alloc initWithTitle:title
+                                                  message:text
+                                                 delegate:nil
+                                        cancelButtonTitle:@"OK"
+                                        otherButtonTitles:nil];
     [alert show];
 }
 
@@ -82,7 +78,7 @@
     }
     
     // イメージピッカー
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    UIImagePickerController *picker = [UIImagePickerController.alloc init];
     picker.sourceType = sourceType;
     picker.delegate = self;
     
@@ -100,7 +96,9 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
     [_imageView setImage:image];
     
     // ビューコントローラのビューを閉じる
-    [[picker presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+    [picker.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    
+    [self.navigationController pushViewController:[RegistrationViewController.alloc init] animated:YES];
 }
 
 
@@ -108,12 +106,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)pickerCtl {
     // ビューコントローラのビューを閉じる
     [[pickerCtl presentingViewController] dismissViewControllerAnimated:YES completion:nil];
-}
-
-
-// ボタンクリック時のイベント処理
-- (IBAction)clickButtonCamera:(UIButton *)sender {
-    [self openPicker:UIImagePickerControllerSourceTypeCamera];
 }
 
 @end

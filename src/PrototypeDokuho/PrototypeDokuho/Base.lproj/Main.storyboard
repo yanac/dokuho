@@ -41,19 +41,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylR-3T-N0Z">
-                                <rect key="frame" x="131" y="343" width="59" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="camera">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="0QX-I7-L64"/>
                     <connections>
-                        <outlet property="buttonCamera" destination="ylR-3T-N0Z" id="8R4-Z8-Ks8"/>
                         <outlet property="buttonRegistration" destination="lZf-L5-S98" id="tLo-2x-Vxe"/>
                     </connections>
                 </viewController>
@@ -86,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="1446" y="146"/>
         </scene>
-        <!--View Controller-->
+        <!--Registration View Controller-->
         <scene sceneID="pDP-o0-doW">
             <objects>
-                <viewController id="78B-qh-8wF" sceneMemberID="viewController">
+                <viewController id="78B-qh-8wF" customClass="RegistrationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UuB-5a-I1J"/>
                         <viewControllerLayoutGuide type="bottom" id="alk-Kd-s8T"/>
@@ -97,8 +89,17 @@
                     <view key="view" contentMode="scaleToFill" id="CMU-ss-xBl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RBu-tM-TUo">
+                                <rect key="frame" x="15" y="67" width="290" height="252"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="displayImage" destination="RBu-tM-TUo" id="t3x-BA-0Wp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94L-if-VO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

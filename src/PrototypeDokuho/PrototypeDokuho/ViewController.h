@@ -12,7 +12,6 @@
     UIImageView *_imageView;
 }
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonCamera;
 @property (weak, nonatomic) IBOutlet UIButton *buttonRegistration;
 
 @end
