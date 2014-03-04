@@ -17,6 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OYZ-3B-D4D">
+                                <rect key="frame" x="0.0" y="17" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="Hgg-rG-Oyq"/>
+                                </items>
+                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnF-8u-bf7">
                                 <rect key="frame" x="137" y="194" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -27,17 +34,10 @@
                                     <segue destination="GfT-2k-IkE" kind="push" id="aQI-NH-p74"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OYZ-3B-D4D">
-                                <rect key="frame" x="0.0" y="17" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="Hgg-rG-Oyq"/>
-                                </items>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylR-3T-N0Z">
-                                <rect key="frame" x="131" y="279" width="59" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZf-L5-S98">
+                                <rect key="frame" x="137" y="269" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="camera">
+                                <state key="normal" title="登録">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -46,12 +46,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="0QX-I7-L64"/>
                     <connections>
-                        <outlet property="buttonCamera" destination="ylR-3T-N0Z" id="8R4-Z8-Ks8"/>
+                        <outlet property="buttonRegistration" destination="lZf-L5-S98" id="tLo-2x-Vxe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="924" y="146"/>
+            <point key="canvasLocation" x="952" y="146"/>
         </scene>
         <!--Books View Controller-->
         <scene sceneID="9hA-Ix-DSR">
@@ -76,7 +76,34 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvQ-hy-Phe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1280" y="148"/>
+            <point key="canvasLocation" x="1446" y="146"/>
+        </scene>
+        <!--Registration View Controller-->
+        <scene sceneID="pDP-o0-doW">
+            <objects>
+                <viewController id="78B-qh-8wF" customClass="RegistrationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UuB-5a-I1J"/>
+                        <viewControllerLayoutGuide type="bottom" id="alk-Kd-s8T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CMU-ss-xBl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RBu-tM-TUo">
+                                <rect key="frame" x="15" y="67" width="290" height="252"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="displayImage" destination="RBu-tM-TUo" id="t3x-BA-0Wp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="94L-if-VO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1446" y="858"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Jv-xg-ijp">

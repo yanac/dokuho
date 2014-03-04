@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
+@interface ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIActionSheetDelegate> {
     UIImageView *_imageView;
 }
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonCamera;
+@property (weak, nonatomic) IBOutlet UIButton *buttonRegistration;
 
 @end

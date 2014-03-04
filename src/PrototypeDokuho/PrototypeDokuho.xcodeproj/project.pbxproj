@@ -32,6 +32,7 @@
 		0CAF136C185B3D8D00BCCE83 /* bookImage6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CAF1364185B3D8D00BCCE83 /* bookImage6.jpg */; };
 		0CAF136D185B3D8D00BCCE83 /* bookImage7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CAF1365185B3D8D00BCCE83 /* bookImage7.jpg */; };
 		0CAF136E185B3D8D00BCCE83 /* bookImage8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CAF1366185B3D8D00BCCE83 /* bookImage8.jpg */; };
+		0CB4BC2E18C47F770024EBFF /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB4BC2D18C47F770024EBFF /* RegistrationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		0CAF1364185B3D8D00BCCE83 /* bookImage6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bookImage6.jpg; sourceTree = "<group>"; };
 		0CAF1365185B3D8D00BCCE83 /* bookImage7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bookImage7.jpg; sourceTree = "<group>"; };
 		0CAF1366185B3D8D00BCCE83 /* bookImage8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bookImage8.jpg; sourceTree = "<group>"; };
+		0CB4BC2C18C47F770024EBFF /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
+		0CB4BC2D18C47F770024EBFF /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,17 +140,11 @@
 		0CAD61D918583C0500178F04 /* PrototypeDokuho */ = {
 			isa = PBXGroup;
 			children = (
+				0CB4BC2918C45F5F0024EBFF /* View */,
+				0CB4BC2818C45F2E0024EBFF /* Controller */,
 				0CAD61E218583C0500178F04 /* AppDelegate.h */,
 				0CAD61E318583C0500178F04 /* AppDelegate.m */,
 				0CAD61E518583C0500178F04 /* Main.storyboard */,
-				0CAF134B185AF65E00BCCE83 /* BooksView.h */,
-				0CAF134C185AF65E00BCCE83 /* BooksView.m */,
-				0C2E1F0318BDE6FB001FC8F3 /* BooksViewController.h */,
-				0C2E1F0418BDE6FB001FC8F3 /* BooksViewController.m */,
-				0C2E1F0018BDE0B3001FC8F3 /* BooksViewCell.h */,
-				0C2E1F0118BDE0B3001FC8F3 /* BooksViewCell.m */,
-				0CAD61E818583C0500178F04 /* ViewController.h */,
-				0CAD61E918583C0500178F04 /* ViewController.m */,
 				0CAD61EB18583C0500178F04 /* Images.xcassets */,
 				0CAD61DA18583C0500178F04 /* Supporting Files */,
 			);
@@ -197,6 +194,54 @@
 				0CAF1366185B3D8D00BCCE83 /* bookImage8.jpg */,
 			);
 			name = bookImages;
+			sourceTree = "<group>";
+		};
+		0CB4BC2818C45F2E0024EBFF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0CB4BC2F18C47F830024EBFF /* Registration */,
+				0CB4BC2B18C45F810024EBFF /* Books */,
+				0CAD61E818583C0500178F04 /* ViewController.h */,
+				0CAD61E918583C0500178F04 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0CB4BC2918C45F5F0024EBFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0CB4BC2A18C45F6F0024EBFF /* Books */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0CB4BC2A18C45F6F0024EBFF /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				0CAF134B185AF65E00BCCE83 /* BooksView.h */,
+				0CAF134C185AF65E00BCCE83 /* BooksView.m */,
+				0C2E1F0018BDE0B3001FC8F3 /* BooksViewCell.h */,
+				0C2E1F0118BDE0B3001FC8F3 /* BooksViewCell.m */,
+			);
+			name = Books;
+			sourceTree = "<group>";
+		};
+		0CB4BC2B18C45F810024EBFF /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				0C2E1F0318BDE6FB001FC8F3 /* BooksViewController.h */,
+				0C2E1F0418BDE6FB001FC8F3 /* BooksViewController.m */,
+			);
+			name = Books;
+			sourceTree = "<group>";
+		};
+		0CB4BC2F18C47F830024EBFF /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				0CB4BC2C18C47F770024EBFF /* RegistrationViewController.h */,
+				0CB4BC2D18C47F770024EBFF /* RegistrationViewController.m */,
+			);
+			name = Registration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +358,7 @@
 				0CAD61E018583C0500178F04 /* main.m in Sources */,
 				0CAF134D185AF65E00BCCE83 /* BooksView.m in Sources */,
 				0C2E1F0218BDE0B3001FC8F3 /* BooksViewCell.m in Sources */,
+				0CB4BC2E18C47F770024EBFF /* RegistrationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
