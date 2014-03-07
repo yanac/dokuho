@@ -8,10 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RegistrationViewController : UIViewController
+@interface RegistrationViewController : UIViewController <UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UIImageView *displayImage;
+@property (strong, nonatomic) UIImageView *displayImageView;
+
+@property (strong, nonatomic) UIButton *dateButton;
+
+@property (strong, nonatomic) UITextField *memoTextField;
+
+@property UIDatePicker *datePicker;
 
 - (void)initWithDisplayImage:(UIImage *)image;
 
 @end
+

@@ -14,8 +14,8 @@
 @end
 
 @implementation ViewController
-- (void)viewDidLoad
-{
+
+- (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
@@ -23,26 +23,30 @@
                           action:@selector(clickButtonRegistration:)
                 forControlEvents:UIControlEventTouchUpInside];
     
-    NSLog(@"%@", self.navigationController.topViewController);
-    
+    [self.buttonMoveRegistrationView addTarget:self
+                                        action:@selector(clickMoveRegistrationView:)
+                              forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (IBAction)clickMoveRegistrationView:(id)sender {
+    RegistrationViewController *RVC = [RegistrationViewController.alloc init];
+    [self.navigationController pushViewController:RVC animated:YES];
+}
+
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
         case 0:
             // １番目のボタンが押されたときの処理を記述する
+            [self openPicker:UIImagePickerControllerSourceTypeCamera];
             break;
         case 1:
             // ２番目のボタンが押されたときの処理を記述する
-        {
-            [self openPicker:UIImagePickerControllerSourceTypeCamera];
-        }
+            [self openPicker:UIImagePickerControllerSourceTypePhotoLibrary];
             break;
     }
 }
@@ -52,7 +56,7 @@
                                                                           delegate:self
                                                                  cancelButtonTitle:@"キャンセル"
                                                             destructiveButtonTitle:nil
-                                                                 otherButtonTitles:@"カメラロール", @"撮影", nil];
+                                                                 otherButtonTitles:@"撮影", @"カメラロールから開く", nil];
     [selectLoadImageActionSheet showInView:self.view];
 }
 
@@ -93,12 +97,14 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     // イメージの指定
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    [_imageView setImage:image];
     
     // ビューコントローラのビューを閉じる
     [picker.presentingViewController dismissViewControllerAnimated:YES completion:nil];
     
-    [self.navigationController pushViewController:[RegistrationViewController.alloc init] animated:YES];
+    // 登録画面に撮影した写真を渡して画面遷移する
+    RegistrationViewController *registrationViewController = [RegistrationViewController.alloc init];
+    [registrationViewController initWithDisplayImage:image];
+    [self.navigationController pushViewController:registrationViewController animated:YES];
 }
 
 

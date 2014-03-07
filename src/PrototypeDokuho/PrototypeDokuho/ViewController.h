@@ -14,4 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *buttonRegistration;
 
+@property (weak, nonatomic) IBOutlet UIButton *buttonMoveRegistrationView;
+
 @end
