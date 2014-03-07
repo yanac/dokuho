@@ -17,8 +17,9 @@
 
 @implementation BooksViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+#pragma mark - Life Cycle
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -26,8 +27,7 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
@@ -36,24 +36,12 @@
     [self.collectionView registerClass:[BooksViewCell class] forCellWithReuseIdentifier:@"MY_CELL"];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void)loadTestPhotos {
-    
-    NSMutableArray *images = [NSMutableArray array];
-    for (int i = 1; i <= 8; i++) {
-        NSString *filename = [NSString stringWithFormat:@"bookImage%d.jpg", i];
-        [images addObject:[UIImage imageNamed:filename]];
-    }
-    
-    self.bookImages = @[images];
-}
-
-// Delegate Method
+#pragma mark - Delegate
 // セクション数の指定
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return self.bookImages.count;
@@ -66,13 +54,24 @@
 
 // セルオブジェクトを返す
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-
+    
     BooksViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MY_CELL" forIndexPath:indexPath];
     cell.imageView.image = [[self.bookImages objectAtIndex:indexPath.section] objectAtIndex:indexPath.item];
     
     return cell;
 }
 
+#pragma mark - Method
 
+- (void)loadTestPhotos {
+    
+    NSMutableArray *images = [NSMutableArray array];
+    for (int i = 1; i <= 8; i++) {
+        NSString *filename = [NSString stringWithFormat:@"bookImage%d.jpg", i];
+        [images addObject:[UIImage imageNamed:filename]];
+    }
+    
+    self.bookImages = @[images];
+}
 
 @end
