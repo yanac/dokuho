@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C2E1F0218BDE0B3001FC8F3 /* BooksViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2E1F0118BDE0B3001FC8F3 /* BooksViewCell.m */; };
-		0C2E1F0518BDE6FB001FC8F3 /* BooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2E1F0418BDE6FB001FC8F3 /* BooksViewController.m */; };
+		0C2E1F0218BDE0B3001FC8F3 /* ScheduledTaskViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2E1F0118BDE0B3001FC8F3 /* ScheduledTaskViewCell.m */; };
+		0C2E1F0518BDE6FB001FC8F3 /* ScheduledTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2E1F0418BDE6FB001FC8F3 /* ScheduledTasksViewController.m */; };
+		0C3FB1A918CC2889005856A6 /* ScheduledTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3FB1A818CC2889005856A6 /* ScheduledTask.m */; };
+		0C3FB1AC18CC2949005856A6 /* PicturedScheduledTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3FB1AB18CC2949005856A6 /* PicturedScheduledTask.m */; };
+		0C6CFA5818CDDB3E0043C460 /* ScheduledTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6CFA5718CDDB3E0043C460 /* ScheduledTaskManager.m */; };
+		0C835AE618CF3A960040333F /* NOImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C835AE518CF3A960040333F /* NOImage.jpg */; };
 		0CAD61D418583C0500178F04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAD61D318583C0500178F04 /* Foundation.framework */; };
 		0CAD61D618583C0500178F04 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAD61D518583C0500178F04 /* CoreGraphics.framework */; };
 		0CAD61D818583C0500178F04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAD61D718583C0500178F04 /* UIKit.framework */; };
@@ -23,15 +27,7 @@
 		0CAD61F518583C0500178F04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAD61D718583C0500178F04 /* UIKit.framework */; };
 		0CAD61FD18583C0500178F04 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CAD61FB18583C0500178F04 /* InfoPlist.strings */; };
 		0CAD61FF18583C0500178F04 /* PrototypeDokuhoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD61FE18583C0500178F04 /* PrototypeDokuhoTests.m */; };
-		0CAF134D185AF65E00BCCE83 /* BooksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAF134C185AF65E00BCCE83 /* BooksView.m */; };
-		0CAF1367185B3D8D00BCCE83 /* bookImage1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CAF135F185B3D8D00BCCE83 /* bookImage1.jpg */; };
-		0CAF1368185B3D8D00BCCE83 /* bookImage2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CAF1360185B3D8D00BCCE83 /* bookImage2.jpg */; };
-		0CAF1369185B3D8D00BCCE83 /* bookImage3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CAF1361185B3D8D00BCCE83 /* bookImage3.jpg */; };
-		0CAF136A185B3D8D00BCCE83 /* bookImage4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CAF1362185B3D8D00BCCE83 /* bookImage4.jpg */; };
-		0CAF136B185B3D8D00BCCE83 /* bookImage5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CAF1363185B3D8D00BCCE83 /* bookImage5.jpg */; };
-		0CAF136C185B3D8D00BCCE83 /* bookImage6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CAF1364185B3D8D00BCCE83 /* bookImage6.jpg */; };
-		0CAF136D185B3D8D00BCCE83 /* bookImage7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CAF1365185B3D8D00BCCE83 /* bookImage7.jpg */; };
-		0CAF136E185B3D8D00BCCE83 /* bookImage8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CAF1366185B3D8D00BCCE83 /* bookImage8.jpg */; };
+		0CAF134D185AF65E00BCCE83 /* ScheduledTasksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAF134C185AF65E00BCCE83 /* ScheduledTasksView.m */; };
 		0CB4BC2E18C47F770024EBFF /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB4BC2D18C47F770024EBFF /* RegistrationViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -46,10 +42,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C2E1F0018BDE0B3001FC8F3 /* BooksViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BooksViewCell.h; sourceTree = "<group>"; };
-		0C2E1F0118BDE0B3001FC8F3 /* BooksViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BooksViewCell.m; sourceTree = "<group>"; };
-		0C2E1F0318BDE6FB001FC8F3 /* BooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BooksViewController.h; sourceTree = "<group>"; };
-		0C2E1F0418BDE6FB001FC8F3 /* BooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BooksViewController.m; sourceTree = "<group>"; };
+		0C2E1F0018BDE0B3001FC8F3 /* ScheduledTaskViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduledTaskViewCell.h; sourceTree = "<group>"; };
+		0C2E1F0118BDE0B3001FC8F3 /* ScheduledTaskViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduledTaskViewCell.m; sourceTree = "<group>"; };
+		0C2E1F0318BDE6FB001FC8F3 /* ScheduledTasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduledTasksViewController.h; sourceTree = "<group>"; };
+		0C2E1F0418BDE6FB001FC8F3 /* ScheduledTasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduledTasksViewController.m; sourceTree = "<group>"; };
+		0C3FB1A718CC2889005856A6 /* ScheduledTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduledTask.h; sourceTree = "<group>"; };
+		0C3FB1A818CC2889005856A6 /* ScheduledTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduledTask.m; sourceTree = "<group>"; };
+		0C3FB1AA18CC2949005856A6 /* PicturedScheduledTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicturedScheduledTask.h; sourceTree = "<group>"; };
+		0C3FB1AB18CC2949005856A6 /* PicturedScheduledTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicturedScheduledTask.m; sourceTree = "<group>"; };
+		0C6CFA5618CDDB3E0043C460 /* ScheduledTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduledTaskManager.h; sourceTree = "<group>"; };
+		0C6CFA5718CDDB3E0043C460 /* ScheduledTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduledTaskManager.m; sourceTree = "<group>"; };
+		0C835AE518CF3A960040333F /* NOImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NOImage.jpg; sourceTree = "<group>"; };
 		0CAD61D018583C0500178F04 /* PrototypeDokuho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrototypeDokuho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CAD61D318583C0500178F04 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0CAD61D518583C0500178F04 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,16 +72,8 @@
 		0CAD61FA18583C0500178F04 /* PrototypeDokuhoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PrototypeDokuhoTests-Info.plist"; sourceTree = "<group>"; };
 		0CAD61FC18583C0500178F04 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0CAD61FE18583C0500178F04 /* PrototypeDokuhoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrototypeDokuhoTests.m; sourceTree = "<group>"; };
-		0CAF134B185AF65E00BCCE83 /* BooksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BooksView.h; sourceTree = "<group>"; };
-		0CAF134C185AF65E00BCCE83 /* BooksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BooksView.m; sourceTree = "<group>"; };
-		0CAF135F185B3D8D00BCCE83 /* bookImage1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bookImage1.jpg; sourceTree = "<group>"; };
-		0CAF1360185B3D8D00BCCE83 /* bookImage2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bookImage2.jpg; sourceTree = "<group>"; };
-		0CAF1361185B3D8D00BCCE83 /* bookImage3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bookImage3.jpg; sourceTree = "<group>"; };
-		0CAF1362185B3D8D00BCCE83 /* bookImage4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bookImage4.jpg; sourceTree = "<group>"; };
-		0CAF1363185B3D8D00BCCE83 /* bookImage5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bookImage5.jpg; sourceTree = "<group>"; };
-		0CAF1364185B3D8D00BCCE83 /* bookImage6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bookImage6.jpg; sourceTree = "<group>"; };
-		0CAF1365185B3D8D00BCCE83 /* bookImage7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bookImage7.jpg; sourceTree = "<group>"; };
-		0CAF1366185B3D8D00BCCE83 /* bookImage8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bookImage8.jpg; sourceTree = "<group>"; };
+		0CAF134B185AF65E00BCCE83 /* ScheduledTasksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduledTasksView.h; sourceTree = "<group>"; };
+		0CAF134C185AF65E00BCCE83 /* ScheduledTasksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduledTasksView.m; sourceTree = "<group>"; };
 		0CB4BC2C18C47F770024EBFF /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
 		0CB4BC2D18C47F770024EBFF /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +102,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C3FB1A618CC2849005856A6 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				0C3FB1A718CC2889005856A6 /* ScheduledTask.h */,
+				0C3FB1A818CC2889005856A6 /* ScheduledTask.m */,
+				0C3FB1AA18CC2949005856A6 /* PicturedScheduledTask.h */,
+				0C3FB1AB18CC2949005856A6 /* PicturedScheduledTask.m */,
+				0CB45CA518CEFF4B00EC82E4 /* Helper */,
+				0C6CFA5618CDDB3E0043C460 /* ScheduledTaskManager.h */,
+				0C6CFA5718CDDB3E0043C460 /* ScheduledTaskManager.m */,
+			);
+			name = Object;
+			sourceTree = "<group>";
+		};
 		0CAD61C718583C0500178F04 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +149,7 @@
 		0CAD61D918583C0500178F04 /* PrototypeDokuho */ = {
 			isa = PBXGroup;
 			children = (
+				0C3FB1A618CC2849005856A6 /* Object */,
 				0CB4BC2918C45F5F0024EBFF /* View */,
 				0CB4BC2818C45F2E0024EBFF /* Controller */,
 				0CAD61E218583C0500178F04 /* AppDelegate.h */,
@@ -154,7 +164,7 @@
 		0CAD61DA18583C0500178F04 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0CAF135E185B3B3D00BCCE83 /* bookImages */,
+				0CAF135E185B3B3D00BCCE83 /* NOImage */,
 				0CAD61DB18583C0500178F04 /* PrototypeDokuho-Info.plist */,
 				0CAD61DC18583C0500178F04 /* InfoPlist.strings */,
 				0CAD61DF18583C0500178F04 /* main.m */,
@@ -181,26 +191,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0CAF135E185B3B3D00BCCE83 /* bookImages */ = {
+		0CAF135E185B3B3D00BCCE83 /* NOImage */ = {
 			isa = PBXGroup;
 			children = (
-				0CAF135F185B3D8D00BCCE83 /* bookImage1.jpg */,
-				0CAF1360185B3D8D00BCCE83 /* bookImage2.jpg */,
-				0CAF1361185B3D8D00BCCE83 /* bookImage3.jpg */,
-				0CAF1362185B3D8D00BCCE83 /* bookImage4.jpg */,
-				0CAF1363185B3D8D00BCCE83 /* bookImage5.jpg */,
-				0CAF1364185B3D8D00BCCE83 /* bookImage6.jpg */,
-				0CAF1365185B3D8D00BCCE83 /* bookImage7.jpg */,
-				0CAF1366185B3D8D00BCCE83 /* bookImage8.jpg */,
+				0C835AE518CF3A960040333F /* NOImage.jpg */,
 			);
-			name = bookImages;
+			name = NOImage;
+			sourceTree = "<group>";
+		};
+		0CB45CA518CEFF4B00EC82E4 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 		0CB4BC2818C45F2E0024EBFF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				0CB4BC2F18C47F830024EBFF /* Registration */,
-				0CB4BC2B18C45F810024EBFF /* Books */,
+				0CB4BC2B18C45F810024EBFF /* ScheduledTasks */,
 				0CAD61E818583C0500178F04 /* ViewController.h */,
 				0CAD61E918583C0500178F04 /* ViewController.m */,
 			);
@@ -210,29 +220,29 @@
 		0CB4BC2918C45F5F0024EBFF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0CB4BC2A18C45F6F0024EBFF /* Books */,
+				0CB4BC2A18C45F6F0024EBFF /* ScheduledTasks */,
 			);
 			name = View;
 			sourceTree = "<group>";
 		};
-		0CB4BC2A18C45F6F0024EBFF /* Books */ = {
+		0CB4BC2A18C45F6F0024EBFF /* ScheduledTasks */ = {
 			isa = PBXGroup;
 			children = (
-				0CAF134B185AF65E00BCCE83 /* BooksView.h */,
-				0CAF134C185AF65E00BCCE83 /* BooksView.m */,
-				0C2E1F0018BDE0B3001FC8F3 /* BooksViewCell.h */,
-				0C2E1F0118BDE0B3001FC8F3 /* BooksViewCell.m */,
+				0CAF134B185AF65E00BCCE83 /* ScheduledTasksView.h */,
+				0CAF134C185AF65E00BCCE83 /* ScheduledTasksView.m */,
+				0C2E1F0018BDE0B3001FC8F3 /* ScheduledTaskViewCell.h */,
+				0C2E1F0118BDE0B3001FC8F3 /* ScheduledTaskViewCell.m */,
 			);
-			name = Books;
+			name = ScheduledTasks;
 			sourceTree = "<group>";
 		};
-		0CB4BC2B18C45F810024EBFF /* Books */ = {
+		0CB4BC2B18C45F810024EBFF /* ScheduledTasks */ = {
 			isa = PBXGroup;
 			children = (
-				0C2E1F0318BDE6FB001FC8F3 /* BooksViewController.h */,
-				0C2E1F0418BDE6FB001FC8F3 /* BooksViewController.m */,
+				0C2E1F0318BDE6FB001FC8F3 /* ScheduledTasksViewController.h */,
+				0C2E1F0418BDE6FB001FC8F3 /* ScheduledTasksViewController.m */,
 			);
-			name = Books;
+			name = ScheduledTasks;
 			sourceTree = "<group>";
 		};
 		0CB4BC2F18C47F830024EBFF /* Registration */ = {
@@ -323,16 +333,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CAF136B185B3D8D00BCCE83 /* bookImage5.jpg in Resources */,
-				0CAF136C185B3D8D00BCCE83 /* bookImage6.jpg in Resources */,
-				0CAF136D185B3D8D00BCCE83 /* bookImage7.jpg in Resources */,
-				0CAF1367185B3D8D00BCCE83 /* bookImage1.jpg in Resources */,
 				0CAD61EC18583C0500178F04 /* Images.xcassets in Resources */,
-				0CAF1368185B3D8D00BCCE83 /* bookImage2.jpg in Resources */,
 				0CAD61DE18583C0500178F04 /* InfoPlist.strings in Resources */,
-				0CAF1369185B3D8D00BCCE83 /* bookImage3.jpg in Resources */,
-				0CAF136E185B3D8D00BCCE83 /* bookImage8.jpg in Resources */,
-				0CAF136A185B3D8D00BCCE83 /* bookImage4.jpg in Resources */,
+				0C835AE618CF3A960040333F /* NOImage.jpg in Resources */,
 				0CAD61E718583C0500178F04 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,12 +355,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C3FB1A918CC2889005856A6 /* ScheduledTask.m in Sources */,
+				0C6CFA5818CDDB3E0043C460 /* ScheduledTaskManager.m in Sources */,
 				0CAD61EA18583C0500178F04 /* ViewController.m in Sources */,
-				0C2E1F0518BDE6FB001FC8F3 /* BooksViewController.m in Sources */,
+				0C2E1F0518BDE6FB001FC8F3 /* ScheduledTasksViewController.m in Sources */,
 				0CAD61E418583C0500178F04 /* AppDelegate.m in Sources */,
+				0C3FB1AC18CC2949005856A6 /* PicturedScheduledTask.m in Sources */,
 				0CAD61E018583C0500178F04 /* main.m in Sources */,
-				0CAF134D185AF65E00BCCE83 /* BooksView.m in Sources */,
-				0C2E1F0218BDE0B3001FC8F3 /* BooksViewCell.m in Sources */,
+				0CAF134D185AF65E00BCCE83 /* ScheduledTasksView.m in Sources */,
+				0C2E1F0218BDE0B3001FC8F3 /* ScheduledTaskViewCell.m in Sources */,
 				0CB4BC2E18C47F770024EBFF /* RegistrationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

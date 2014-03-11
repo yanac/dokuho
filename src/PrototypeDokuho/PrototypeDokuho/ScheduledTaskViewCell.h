@@ -1,5 +1,5 @@
 //
-//  BooksViewCell.h
+//  ScheduledTaskViewCell.h
 //  PrototypeDokuho
 //
 //  Created by yanac on 2014/02/26.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BooksViewCell : UICollectionViewCell
+@interface ScheduledTaskViewCell : UICollectionViewCell
 
 @property (nonatomic, weak) UIImageView *imageView;
 

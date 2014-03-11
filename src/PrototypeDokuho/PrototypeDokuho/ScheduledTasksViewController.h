@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BooksViewController : UICollectionViewController
+@interface ScheduledTasksViewController : UICollectionViewController
 
 @end

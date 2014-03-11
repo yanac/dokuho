@@ -1,5 +1,5 @@
 //
-//  BooksView.h
+//  ScheduledTaskView.h
 //  PrototypeDokuho
 //
 //  Created by yanac on 2013/12/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BooksView : UICollectionView
+@interface ScheduledTasksView : UICollectionView
 
 @end

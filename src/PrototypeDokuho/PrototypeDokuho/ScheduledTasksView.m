@@ -1,19 +1,19 @@
 //
-//  BooksView.m
+//  ScheduledTasksView.m
 //  PrototypeDokuho
 //
 //  Created by yanac on 2013/12/13.
 //  Copyright (c) 2013年 梁島 啓多. All rights reserved.
 //
 
-#import "BooksView.h"
+#import "ScheduledTasksView.h"
 
-@implementation BooksView
+@implementation ScheduledTasksView
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code 
+        // Initialization code
     }
     return self;
 }

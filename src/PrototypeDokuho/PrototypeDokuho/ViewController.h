@@ -12,7 +12,7 @@
     UIImageView *_imageView;
 }
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonRegistration;
+@property (weak, nonatomic) IBOutlet UIButton *buttonSelectLoadImageWay;
 
 @property (weak, nonatomic) IBOutlet UIButton *buttonMoveRegistrationView;
 

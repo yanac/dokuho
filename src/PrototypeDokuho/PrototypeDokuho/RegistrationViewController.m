@@ -7,12 +7,17 @@
 //
 
 #import "RegistrationViewController.h"
+#import "PicturedScheduledTask.h"
+#import "ScheduledTaskManager.h"
 
 @interface RegistrationViewController ()
 
 @end
 
 @implementation RegistrationViewController
+{
+    UIDatePicker *datePicker;
+}
 
 #pragma mark - Life Cycle
 
@@ -33,46 +38,62 @@
     return self;
 }
 
-- (void)initWithDisplayImage:(UIImage *)image {
-    [self initDisplayImageView];
+- (void)initializeDisplayImage:(UIImage *)image {
+    [self initializeDisplayImageView];
     self.displayImageView.image = image;
 }
 
-- (void)initDisplayImageView {
-    self.displayImageView = [UIImageView.alloc initWithFrame:CGRectMake(70, 80, 180, 280)];
+- (void)initializeDisplayImageView {
+    self.displayImageView = [UIImageView.alloc initWithFrame:CGRectMake(30, 75, 260, 280)];
+    self.displayImageView.contentMode = UIViewContentModeScaleAspectFill;
+    [self.displayImageView setClipsToBounds:YES];
 }
 
 - (void)loadView {
     self.view = [UIView.alloc init];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    { // Init ImageView
+    { // add ImageView
         [self.view addSubview:self.displayImageView];
     }
     
     { // Init Button (Date)
-        self.dateButton = [UIButton.alloc initWithFrame:CGRectMake(50, 380, 220, 50)];
-        [self.dateButton  setTitle:[self getNowDateString] forState:UIControlStateNormal];
-        self.dateButton.backgroundColor = [UIColor cyanColor];
-        [self.view addSubview:self.dateButton];
+        self.startDateAtScheduledTaskButton = [UIButton.alloc initWithFrame:CGRectMake(50, 405, 220, 30)];
+        [self.startDateAtScheduledTaskButton  setTitle:[self getNowDateString] forState:UIControlStateNormal];
+        self.startDateAtScheduledTaskButton.backgroundColor = [UIColor cyanColor];
+        [self.view addSubview:self.startDateAtScheduledTaskButton];
     }
     
-    { // Init TextField (MEMO)
-        self.memoTextField = [UITextField.alloc initWithFrame:CGRectMake(50, 450, 220, 100)];
-        self.memoTextField.backgroundColor = [UIColor grayColor];
-        self.memoTextField.returnKeyType = UIReturnKeyDone;
-        [self.view addSubview:self.memoTextField];
+    { // Init TextField (Memo)
+        self.memoAtScheduledTaskTextField = [UITextField.alloc initWithFrame:CGRectMake(50, 450, 220, 100)];
+        self.memoAtScheduledTaskTextField.backgroundColor = [UIColor grayColor];
+        self.memoAtScheduledTaskTextField.returnKeyType = UIReturnKeyDone;
+        [self.view addSubview:self.memoAtScheduledTaskTextField];
+        self.memoAtScheduledTaskTextField.delegate = self;
     }
     
-    self.memoTextField.delegate = self;
+    { // Init TextField(Title)
+        self.titleAtScheduledTaskTextField = [UITextField.alloc initWithFrame:CGRectMake(50, 365, 220, 30)];
+        self.titleAtScheduledTaskTextField.backgroundColor = [UIColor grayColor];
+        self.titleAtScheduledTaskTextField.returnKeyType = UIReturnKeyDone;
+        [self.view addSubview:self.titleAtScheduledTaskTextField];
+        self.titleAtScheduledTaskTextField.delegate = self;
+    }
+    
+    UIBarButtonItem *save = [UIBarButtonItem.alloc initWithBarButtonSystemItem:UIBarButtonSystemItemSave
+                                                                        target:self
+                                                                        action:@selector(save:)];
+    [self.navigationItem setRightBarButtonItem:save animated:YES];
+
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.dateButton addTarget:self
+    [self.startDateAtScheduledTaskButton addTarget:self
                         action:@selector(pushDateButton:)
               forControlEvents:UIControlEventTouchUpInside];
+
 	// Do any additional setup after loading the view.
 }
 
@@ -98,15 +119,25 @@
 
 #pragma mark - Event
 
-- (void)done:(id)sender {
-    //dateTextFieldにdatePickerのdateを表示
-    self.dateButton.titleLabel.text = [self getDateStringWithDate:self.datePicker.date];
+- (void)pushDoneButton:(id)sender {
+    //dateを表示
+    self.startDateAtScheduledTaskButton.titleLabel.text = [self getStringWithDate:datePicker.date];
     
 	//ピッカーをしまう
-    [self.datePicker removeFromSuperview];
-	
-	//doneボタンを消す
-    [self.navigationItem setRightBarButtonItem:nil animated:YES];
+    [actionSheet dismissWithClickedButtonIndex:0 animated:YES];
+}
+
+- (void)pushCancelButton:(id)sender {
+    [actionSheet dismissWithClickedButtonIndex:0 animated:YES];
+}
+
+- (void)save:(id)sender {
+    PicturedScheduledTask *picturedScheduledTask = [PicturedScheduledTask.alloc initWithPicture:self.displayImageView.image];
+    picturedScheduledTask.memo = self.memoAtScheduledTaskTextField.text;
+    picturedScheduledTask.title = self.titleAtScheduledTaskTextField.text;
+    picturedScheduledTask.date = [self getDateWithString:self.startDateAtScheduledTaskButton.titleLabel.text];
+    
+    [ScheduledTaskManager.alloc saveScheduledTask:picturedScheduledTask fileName:[self getScheduledTaskTitle]];
 }
 
 - (IBAction)pushDateButton:(id)sender {
@@ -116,36 +147,69 @@
 #pragma mark - Method
 
 - (void)showDatePicker {
+    // Init ActionSheet
+    actionSheet = [UIActionSheet.alloc initWithTitle:nil delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
+    
+    // Init Toolbar
+    UIToolbar *toolBar = [UIToolbar.alloc initWithFrame:CGRectMake(0, 0, 320, 44)];
+    toolBar.barStyle = UIBarStyleDefault;
+    [toolBar sizeToFit];
+    
+    UIBarButtonItem *cancelButton = [UIBarButtonItem.alloc initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                                          target:self
+                                                                                action:@selector(pushCancelButton:)];
+    
+    UIBarButtonItem *spacer = [UIBarButtonItem.alloc initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                                                          target:self
+                                                                          action:nil];
+
+    UIBarButtonItem *doneButton = [UIBarButtonItem.alloc initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                              target:self
+                                                                              action:@selector(pushDoneButton:)];
+    
+    NSArray *items = [NSArray arrayWithObjects:cancelButton, spacer, doneButton, nil];
+    
+    [toolBar setItems:items animated:YES];
+    
     { // Init DatePicker
-        self.datePicker = [UIDatePicker.alloc initWithFrame:CGRectMake(0, 300, 200, 300)];
-        self.datePicker.backgroundColor = [UIColor whiteColor];
-        self.datePicker.date = [self getDateWithString:self.dateButton.titleLabel.text];
-        [self.view addSubview:self.datePicker];
+        datePicker = [UIDatePicker.alloc initWithFrame:CGRectMake(0, 44, 320, 420)];
+        datePicker.backgroundColor = [UIColor whiteColor];
+        datePicker.date = [self getDateWithString:self.startDateAtScheduledTaskButton.titleLabel.text];
+        [self.view addSubview:datePicker];
     }
-	
-	//ナビゲーションバーの右上にdoneボタンを設置する
-	if (!self.navigationItem.rightBarButtonItem) {
-        UIBarButtonItem *done = [UIBarButtonItem.alloc initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-                                                                            target:self
-                                                                            action:@selector(done:)];
-        [self.navigationItem setRightBarButtonItem:done animated:YES];
-    }
+    
+    [actionSheet addSubview:toolBar];
+    [actionSheet addSubview:datePicker];
+    [actionSheet showInView:self.view];
+    [actionSheet setBounds:CGRectMake(0, 0, 320, 480)];
+
+}
+
+- (NSString *)getScheduledTaskTitle {
+    NSDate *nowDate = [NSDate.alloc init];
+    NSDateFormatter *Formatter = [NSDateFormatter.alloc init];
+    [Formatter setDateFormat:@"yyyyMMddHHmmss"];
+    
+    return [Formatter stringFromDate:nowDate];
 }
 
 - (NSString *)getNowDateString {
     NSDate *nowDate = [NSDate.alloc init];
-    return [self getDateStringWithDate:nowDate];
+    
+    return [self getStringWithDate:nowDate];
 }
 
-- (NSString *)getDateStringWithDate:(NSDate *)date {
+- (NSString *)getStringWithDate:(NSDate *)date {
     NSDateFormatter *Formatter = [NSDateFormatter.alloc init];
     [Formatter setDateFormat:@"yyyy/MM/dd HH:mm"];
+    
     return [Formatter stringFromDate:date];
 }
 
 - (NSDate *)getDateWithString:(NSString *)string {
     NSDateFormatter *Formatter = [NSDateFormatter.alloc init];
     [Formatter setDateFormat:@"yyyy/MM/dd HH:mm"];
+    
     return [Formatter dateFromString:string];
 }
 

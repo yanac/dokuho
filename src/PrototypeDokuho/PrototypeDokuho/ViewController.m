@@ -19,16 +19,16 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    [self.buttonRegistration addTarget:self
-                          action:@selector(clickButtonRegistration:)
+    [self.buttonSelectLoadImageWay addTarget:self
+                          action:@selector(pushButtonSelectLoadImageWay:)
                 forControlEvents:UIControlEventTouchUpInside];
     
     [self.buttonMoveRegistrationView addTarget:self
-                                        action:@selector(clickMoveRegistrationView:)
+                                        action:@selector(pushButtonMoveRegistrationView:)
                               forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (IBAction)clickMoveRegistrationView:(id)sender {
+- (IBAction)pushButtonMoveRegistrationView:(id)sender {
     RegistrationViewController *RVC = [RegistrationViewController.alloc init];
     [self.navigationController pushViewController:RVC animated:YES];
 }
@@ -51,7 +51,7 @@
     }
 }
 
-- (IBAction)clickButtonRegistration:(UIButton *)sender {
+- (IBAction)pushButtonSelectLoadImageWay:(UIButton *)sender {
     UIActionSheet *selectLoadImageActionSheet = [UIActionSheet.alloc initWithTitle:@"画像の読み込み方法を選択してください"
                                                                           delegate:self
                                                                  cancelButtonTitle:@"キャンセル"
@@ -103,7 +103,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     // 登録画面に撮影した写真を渡して画面遷移する
     RegistrationViewController *registrationViewController = [RegistrationViewController.alloc init];
-    [registrationViewController initWithDisplayImage:image];
+    [registrationViewController initializeDisplayImage:image];
     [self.navigationController pushViewController:registrationViewController animated:YES];
 }
 
