@@ -1,14 +1,14 @@
 //
-//  BooksViewCell.m
+//  ScheduledTaskViewCell.m
 //  PrototypeDokuho
 //
 //  Created by yanac on 2014/02/26.
 //  Copyright (c) 2014年 梁島 啓多. All rights reserved.
 //
 
-#import "BooksViewCell.h"
+#import "ScheduledTaskViewCell.h"
 
-@implementation BooksViewCell
+@implementation ScheduledTaskViewCell
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];

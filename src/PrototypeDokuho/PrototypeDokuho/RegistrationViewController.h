@@ -8,17 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RegistrationViewController : UIViewController <UITextFieldDelegate>
+@interface RegistrationViewController : UIViewController <UIActionSheetDelegate, UITextFieldDelegate> {
+    UIActionSheet *actionSheet;
+}
 
 @property (strong, nonatomic) UIImageView *displayImageView;
 
-@property (strong, nonatomic) UIButton *dateButton;
+@property (strong, nonatomic) UIButton *startDateAtScheduledTaskButton;
 
-@property (strong, nonatomic) UITextField *memoTextField;
+@property (strong, nonatomic) UITextField *memoAtScheduledTaskTextField;
 
-@property UIDatePicker *datePicker;
+@property (strong, nonatomic) UITextField *titleAtScheduledTaskTextField;
 
-- (void)initWithDisplayImage:(UIImage *)image;
+- (void)initializeDisplayImage:(UIImage *)image;
 
 @end
 
