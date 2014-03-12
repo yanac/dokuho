@@ -14,8 +14,10 @@
 
 @property (nonatomic) NSString *memo;
 
+@property (nonatomic) NSString *fileNmae;
+
 @property (nonatomic) NSDate *date;
 
-- (instancetype)initWithMemo:(NSString *)memo title:(NSString *)title date:(NSDate *)date;
+- (instancetype)initWithMemo:(NSString *)memo title:(NSString *)title fileName:(NSString *)fileName date:(NSDate *)date;
 
 @end

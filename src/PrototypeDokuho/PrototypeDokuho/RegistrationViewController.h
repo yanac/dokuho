@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PicturedScheduledTask.h"
 
 @interface RegistrationViewController : UIViewController <UIActionSheetDelegate, UITextFieldDelegate> {
     UIActionSheet *actionSheet;
@@ -20,7 +21,15 @@
 
 @property (strong, nonatomic) UITextField *titleAtScheduledTaskTextField;
 
+@property (strong, nonatomic) PicturedScheduledTask *picturedScheduledTask;
+
 - (void)initializeDisplayImage:(UIImage *)image;
+
+- (NSString *)getNowDateString;
+
+- (NSString *)getStringWithDate:(NSDate *)date;
+
+- (NSDate *)getDateWithString:(NSString *)string;
 
 @end
 

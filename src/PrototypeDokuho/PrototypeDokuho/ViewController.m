@@ -22,16 +22,8 @@
     [self.buttonSelectLoadImageWay addTarget:self
                           action:@selector(pushButtonSelectLoadImageWay:)
                 forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.buttonMoveRegistrationView addTarget:self
-                                        action:@selector(pushButtonMoveRegistrationView:)
-                              forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (IBAction)pushButtonMoveRegistrationView:(id)sender {
-    RegistrationViewController *RVC = [RegistrationViewController.alloc init];
-    [self.navigationController pushViewController:RVC animated:YES];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -48,6 +40,9 @@
             // ２番目のボタンが押されたときの処理を記述する
             [self openPicker:UIImagePickerControllerSourceTypePhotoLibrary];
             break;
+        case 2:
+            [self.navigationController pushViewController:[RegistrationViewController.alloc init] animated:YES];
+            break;
     }
 }
 
@@ -56,7 +51,7 @@
                                                                           delegate:self
                                                                  cancelButtonTitle:@"キャンセル"
                                                             destructiveButtonTitle:nil
-                                                                 otherButtonTitles:@"撮影", @"カメラロールから開く", nil];
+                                                                 otherButtonTitles:@"撮影", @"カメラロールから開く", @"画像なしで登録", nil];
     [selectLoadImageActionSheet showInView:self.view];
 }
 
