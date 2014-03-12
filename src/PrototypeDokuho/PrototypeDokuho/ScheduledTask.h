@@ -14,7 +14,7 @@
 
 @property (nonatomic) NSString *memo;
 
-@property (nonatomic) NSString *fileNmae;
+@property (nonatomic) NSString *fileName;
 
 @property (nonatomic) NSDate *date;
 

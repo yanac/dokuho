@@ -31,7 +31,7 @@
     
     NSError *error;
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSArray *scheduledTasks = [fileManager contentsOfDirectoryAtPath:[[paths objectAtIndex:0] stringByAppendingPathComponent:@"/ScheduledTasks"]
+    NSArray *scheduledTasks = [fileManager contentsOfDirectoryAtPath:[paths[0] stringByAppendingPathComponent:@"/ScheduledTasks"]
                                                      error:&error];
     
     return scheduledTasks;

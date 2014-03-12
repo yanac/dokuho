@@ -53,6 +53,9 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     { // add ImageView
+        if (self.displayImageView.image == nil) {
+            [self initializeDisplayImage:[UIImage imageNamed:@"NOImage.jpg"]];
+        }
         [self.view addSubview:self.displayImageView];
     }
     
@@ -96,7 +99,9 @@
         self.titleAtScheduledTaskTextField.text = self.picturedScheduledTask.title;
         self.memoAtScheduledTaskTextField.text = self.picturedScheduledTask.memo;
         self.startDateAtScheduledTaskButton.titleLabel.text = [self getStringWithDate:self.picturedScheduledTask.date];
-        self.displayImageView.image = self.picturedScheduledTask.picture;
+        if (self.picturedScheduledTask.picture) {
+            self.displayImageView.image = self.picturedScheduledTask.picture;
+        }
     }
 	// Do any additional setup after loading the view.
 }
@@ -105,6 +110,11 @@
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Delegate
@@ -136,15 +146,24 @@
 }
 
 - (void)save:(id)sender {
-    PicturedScheduledTask *picturedScheduledTask = [PicturedScheduledTask.alloc initWithPicture:self.displayImageView.image];
+    PicturedScheduledTask *picturedScheduledTask = [PicturedScheduledTask.alloc init];
     picturedScheduledTask.memo = self.memoAtScheduledTaskTextField.text;
     picturedScheduledTask.title = self.titleAtScheduledTaskTextField.text;
     picturedScheduledTask.date = [self getDateWithString:self.startDateAtScheduledTaskButton.titleLabel.text];
+    picturedScheduledTask.fileName = self.picturedScheduledTask.fileName;
     
-    if (picturedScheduledTask.fileNmae) {
-        [ScheduledTaskManager.alloc saveScheduledTask:picturedScheduledTask fileName:picturedScheduledTask.fileNmae];
+    if (self.displayImageView.image == [UIImage imageNamed:@"NOImage.jpg"]) {
+        picturedScheduledTask.picture = nil;
+    } else if (self.displayImageView.image == nil) {
+        picturedScheduledTask.picture = nil;
     } else {
-        picturedScheduledTask.fileNmae = [self getScheduledTaskTitle];
+        picturedScheduledTask.picture = self.displayImageView.image;
+    }
+    
+    if (self.picturedScheduledTask.fileName) {
+        [ScheduledTaskManager.alloc saveScheduledTask:picturedScheduledTask fileName:self.picturedScheduledTask.fileName];
+    } else {
+        picturedScheduledTask.fileName = [self getScheduledTaskTitle];
         [ScheduledTaskManager.alloc saveScheduledTask:picturedScheduledTask fileName:[self getScheduledTaskTitle]];
     }
     [self.navigationController popViewControllerAnimated:YES];
@@ -158,7 +177,7 @@
 
 - (void)showDatePicker {
     // Init ActionSheet
-    actionSheet = [UIActionSheet.alloc initWithTitle:nil delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
+    actionSheet = [UIActionSheet.alloc initWithTitle:@"" delegate:self cancelButtonTitle:@"" destructiveButtonTitle:@"" otherButtonTitles:nil];
     
     // Init Toolbar
     UIToolbar *toolBar = [UIToolbar.alloc initWithFrame:CGRectMake(0, 0, 320, 44)];
@@ -221,11 +240,6 @@
     [Formatter setDateFormat:@"yyyy/MM/dd HH:mm"];
     
     return [Formatter dateFromString:string];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

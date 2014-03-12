@@ -10,10 +10,10 @@
 #import "ScheduledTaskViewCell.h"
 #import "ScheduledTaskManager.h"
 #import "RegistrationViewController.h"
+#import "UIImage+Resize.h"
 
 @interface ScheduledTasksViewController ()
 @property (nonatomic, strong) NSArray *scheduledTasks;
-@property (nonatomic, strong) NSArray *scheduledTaskImages;
 
 @end
 
@@ -32,8 +32,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-
-    [self loadScheduledTasks];
     
     [self.collectionView registerClass:[ScheduledTaskViewCell class] forCellWithReuseIdentifier:@"MY_CELL"];
 }
@@ -51,37 +49,38 @@
 #pragma mark - Delegate
 // セクション数の指定
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return self.scheduledTaskImages.count;
+    return self.scheduledTasks.count;
 }
 
 // セクションに応じたセルの数を返す
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [[self.scheduledTaskImages objectAtIndex:section] count];
+    return [[self.scheduledTasks objectAtIndex:section] count];
 }
 
 // セルオブジェクトを返す
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     ScheduledTaskViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MY_CELL" forIndexPath:indexPath];
-    cell.imageView.image = [[self.scheduledTaskImages objectAtIndex:indexPath.section] objectAtIndex:indexPath.item];
-    
+    UIImage *scheduledTaskImage = [[self.scheduledTasks[indexPath.section] objectAtIndex:indexPath.item] picture];
+    UIImage *cellImage;
+
+    if (scheduledTaskImage) {
+        cellImage = [scheduledTaskImage resizeIfOverSize:cell.imageView.frame.size];
+    } else {
+        cellImage = [[UIImage imageNamed:@"NOImage.jpg"] resizeIfOverSize:cell.imageView.frame.size];
+    }
+    cell.imageView.image = cellImage;
     return cell;
 }
 
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     // コレクションビューの選択を可能にする
-    // ストーリボードを利用してCollectionViewCellから表示する画面にPush接続しいておく
-    ScheduledTaskViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MY_CELL" forIndexPath:indexPath];
-    RegistrationViewController *RVC = [RegistrationViewController.alloc init];
-    RVC.picturedScheduledTask = [[self.scheduledTasks objectAtIndex:indexPath.section] objectAtIndex:indexPath.item];
+    // ScheduledTaskViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MY_CELL" forIndexPath:indexPath];
+    RegistrationViewController *registrationViewController = [RegistrationViewController.alloc init];
+    registrationViewController.picturedScheduledTask = [self.scheduledTasks[indexPath.section] objectAtIndex:indexPath.item];
     
-    [self.navigationController pushViewController:RVC animated:YES];
-    
-    if (cell.imageView.image) {
-        [RVC initializeDisplayImage:cell.imageView.image];
-    } else {
-        [RVC initializeDisplayImage:[UIImage imageNamed:@"NOImage.jpg"]];
-    }
+    [self.navigationController pushViewController:registrationViewController animated:YES];
+    [registrationViewController initializeDisplayImage:[[self.scheduledTasks[indexPath.section] objectAtIndex:indexPath.item] picture]];
     
     return YES;
 }
@@ -91,23 +90,16 @@
 - (void)loadScheduledTasks {
     NSArray *scheduledTask = [ScheduledTaskManager.alloc loadScheduledTasks];
     NSMutableArray *scheduledTasks = [NSMutableArray array];
-    NSMutableArray *images = [NSMutableArray array];
     NSMutableArray *tasks = [NSMutableArray array];
     
     int i = 0;
     
     for (scheduledTasks in scheduledTask) {
-        PicturedScheduledTask *task = [ScheduledTaskManager.alloc decodePictureScheduledTask:[NSString stringWithFormat:@"%@", [scheduledTask objectAtIndex:i]]];
+        PicturedScheduledTask *task = [ScheduledTaskManager.alloc decodePictureScheduledTask:[NSString stringWithFormat:@"%@", scheduledTask[i]]];
         [tasks addObject:task];
-        if (task.picture != nil) {
-            [images addObject:task.picture];
-        } else {
-            [images addObject:[UIImage imageNamed:@"NOImage.jpg"]];
-        }
         i++;
     }
-    self.ScheduledTasks = @[tasks];
-    self.ScheduledTaskImages = @[images];
+    self.scheduledTasks = @[tasks];
 }
 
 @end
