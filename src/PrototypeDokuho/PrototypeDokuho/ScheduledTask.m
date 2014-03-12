@@ -10,12 +10,13 @@
 
 @implementation ScheduledTask
 
-- (instancetype)initWithMemo:(NSString *)memo title:(NSString *)title date:(NSDate *)date{
+- (instancetype)initWithMemo:(NSString *)memo title:(NSString *)title fileName:(NSString *)fileName date:(NSDate *)date{
     self = [super init];
     if (self) {
         _title = title;
         _date = date;
         _memo = memo;
+        _fileNmae = fileName;
     }
     return self;
 }
@@ -26,6 +27,7 @@
         _title = [aDecoder decodeObjectForKey:@"titleAtScheduledTask"];
         _date = [aDecoder decodeObjectForKey:@"startDateAtScheduledTask"];
         _memo = [aDecoder decodeObjectForKey:@"memo"];
+        _fileNmae = [aDecoder decodeObjectForKey:@"fileNmae"];
     }
     return self;
 }
@@ -34,6 +36,7 @@
     [aCoder encodeObject:_title forKey:@"titleAtScheduledTask"];
     [aCoder encodeObject:_date forKey:@"startDateAtScheduledTask"];
     [aCoder encodeObject:_memo forKey:@"memo"];
+    [aCoder encodeObject:_fileNmae forKey:@"fileName"];
 }
 
 @end

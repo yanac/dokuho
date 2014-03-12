@@ -7,7 +7,6 @@
 //
 
 #import "RegistrationViewController.h"
-#import "PicturedScheduledTask.h"
 #import "ScheduledTaskManager.h"
 
 @interface RegistrationViewController ()
@@ -49,7 +48,7 @@
     [self.displayImageView setClipsToBounds:YES];
 }
 
-- (void)loadView {
+- (void)loadView {    
     self.view = [UIView.alloc init];
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -84,7 +83,6 @@
                                                                         target:self
                                                                         action:@selector(save:)];
     [self.navigationItem setRightBarButtonItem:save animated:YES];
-
 }
 
 - (void)viewDidLoad {
@@ -93,7 +91,13 @@
     [self.startDateAtScheduledTaskButton addTarget:self
                         action:@selector(pushDateButton:)
               forControlEvents:UIControlEventTouchUpInside];
-
+    
+    if (self.picturedScheduledTask) {
+        self.titleAtScheduledTaskTextField.text = self.picturedScheduledTask.title;
+        self.memoAtScheduledTaskTextField.text = self.picturedScheduledTask.memo;
+        self.startDateAtScheduledTaskButton.titleLabel.text = [self getStringWithDate:self.picturedScheduledTask.date];
+        self.displayImageView.image = self.picturedScheduledTask.picture;
+    }
 	// Do any additional setup after loading the view.
 }
 
@@ -137,7 +141,13 @@
     picturedScheduledTask.title = self.titleAtScheduledTaskTextField.text;
     picturedScheduledTask.date = [self getDateWithString:self.startDateAtScheduledTaskButton.titleLabel.text];
     
-    [ScheduledTaskManager.alloc saveScheduledTask:picturedScheduledTask fileName:[self getScheduledTaskTitle]];
+    if (picturedScheduledTask.fileNmae) {
+        [ScheduledTaskManager.alloc saveScheduledTask:picturedScheduledTask fileName:picturedScheduledTask.fileNmae];
+    } else {
+        picturedScheduledTask.fileNmae = [self getScheduledTaskTitle];
+        [ScheduledTaskManager.alloc saveScheduledTask:picturedScheduledTask fileName:[self getScheduledTaskTitle]];
+    }
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)pushDateButton:(id)sender {

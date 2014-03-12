@@ -1,0 +1,10 @@
+
+# コンパイル時に pod で警告が出る時はこう書くと抑制できる.
+# (一応無視しても問題ないかは確認しましょう)
+# pod '<PodName>', :inhibit_warnings => true
+
+platform :ios,  '7.0'
+
+pod 'google-toolbox-for-ios'
+
+# vim: ft=ruby

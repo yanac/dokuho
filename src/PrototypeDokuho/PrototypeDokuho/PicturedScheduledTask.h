@@ -13,4 +13,5 @@
 @property (nonatomic) UIImage *picture;
 
 - (instancetype)initWithPicture:(UIImage *)picture;
+
 @end

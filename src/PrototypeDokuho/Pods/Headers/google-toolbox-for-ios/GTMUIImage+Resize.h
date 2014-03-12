@@ -1,0 +1,1 @@
+../../google-toolbox-for-ios/iPhone/GTMUIImage+Resize.h

@@ -1,0 +1,10 @@
+PODS:
+  - google-toolbox-for-ios (1.6.1)
+
+DEPENDENCIES:
+  - google-toolbox-for-ios
+
+SPEC CHECKSUMS:
+  google-toolbox-for-ios: ec19d1dc260214e2f31da2f5c4c2420849f65eda
+
+COCOAPODS: 0.29.0
