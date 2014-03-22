@@ -7,6 +7,7 @@
 //
 
 #import "PicturedScheduledTask.h"
+#import "UIImage+Resize.h"
 
 @implementation PicturedScheduledTask
 
@@ -22,6 +23,7 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         _picture = [aDecoder decodeObjectForKey:@"pictureAtScheduledTask"];
+        _thumbnail = [aDecoder decodeObjectForKey:@"thumbnail"];
     }
     return self;
 }
@@ -29,6 +31,12 @@
 -(void)encodeWithCoder:(NSCoder *)aCoder {
     [super encodeWithCoder:aCoder];
     [aCoder encodeObject:_picture forKey:@"pictureAtScheduledTask"];
+    [aCoder encodeObject:_thumbnail forKey:@"thumbnail"];
+}
+
+-(void)createThumbnail {
+    CGSize size = CGSizeMake(60, 60);
+    _thumbnail = [_picture resizeIfOverSize:size];
 }
 
 @end

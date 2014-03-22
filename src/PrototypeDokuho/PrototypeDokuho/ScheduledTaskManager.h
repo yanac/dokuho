@@ -9,13 +9,18 @@
 #import <Foundation/Foundation.h>
 #import "PicturedScheduledTask.h"
 
-@interface ScheduledTaskManager : NSUserDefaults
+@interface ScheduledTaskManager : NSObject
 
-- (void)saveScheduledTask:(PicturedScheduledTask *)picturedScheduledTask fileName:(NSString *)fileName;
+- (void)saveScheduledTask:(NSObject *)picturedScheduledTask fileName:(NSString *)fileName;
 
-- (NSArray *)loadScheduledTasks;
+- (NSObject *)decodeScheduledTask:(NSString *)fileName;
 
-- (PicturedScheduledTask *)decodePictureScheduledTask:(NSString *)fileName;
+- (NSArray *)loadScheduledTasksArray;
 
+- (NSMutableArray *)getDecodedScheduledTasks;
+
+- (NSMutableArray *)getScheduledTasksPicture;
+
+- (NSMutableArray *)getScheduledTasksThumbnail;
 
 @end

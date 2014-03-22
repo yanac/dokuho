@@ -60,26 +60,26 @@
     }
     
     { // Init Button (Date)
-        self.startDateAtScheduledTaskButton = [UIButton.alloc initWithFrame:CGRectMake(50, 405, 220, 30)];
-        [self.startDateAtScheduledTaskButton  setTitle:[self getNowDateString] forState:UIControlStateNormal];
-        self.startDateAtScheduledTaskButton.backgroundColor = [UIColor cyanColor];
-        [self.view addSubview:self.startDateAtScheduledTaskButton];
+        self.startDateButton = [UIButton.alloc initWithFrame:CGRectMake(50, 405, 220, 30)];
+        [self.startDateButton  setTitle:[self getNowDateString] forState:UIControlStateNormal];
+        self.startDateButton.backgroundColor = [UIColor cyanColor];
+        [self.view addSubview:self.startDateButton];
     }
     
     { // Init TextField (Memo)
-        self.memoAtScheduledTaskTextField = [UITextField.alloc initWithFrame:CGRectMake(50, 450, 220, 100)];
-        self.memoAtScheduledTaskTextField.backgroundColor = [UIColor grayColor];
-        self.memoAtScheduledTaskTextField.returnKeyType = UIReturnKeyDone;
-        [self.view addSubview:self.memoAtScheduledTaskTextField];
-        self.memoAtScheduledTaskTextField.delegate = self;
+        self.memoTextField = [UITextField.alloc initWithFrame:CGRectMake(50, 450, 220, 100)];
+        self.memoTextField.backgroundColor = [UIColor grayColor];
+        self.memoTextField.returnKeyType = UIReturnKeyDone;
+        [self.view addSubview:self.memoTextField];
+        self.memoTextField.delegate = self;
     }
     
     { // Init TextField(Title)
-        self.titleAtScheduledTaskTextField = [UITextField.alloc initWithFrame:CGRectMake(50, 365, 220, 30)];
-        self.titleAtScheduledTaskTextField.backgroundColor = [UIColor grayColor];
-        self.titleAtScheduledTaskTextField.returnKeyType = UIReturnKeyDone;
-        [self.view addSubview:self.titleAtScheduledTaskTextField];
-        self.titleAtScheduledTaskTextField.delegate = self;
+        self.titleTextField = [UITextField.alloc initWithFrame:CGRectMake(50, 365, 220, 30)];
+        self.titleTextField.backgroundColor = [UIColor grayColor];
+        self.titleTextField.returnKeyType = UIReturnKeyDone;
+        [self.view addSubview:self.titleTextField];
+        self.titleTextField.delegate = self;
     }
     
     UIBarButtonItem *save = [UIBarButtonItem.alloc initWithBarButtonSystemItem:UIBarButtonSystemItemSave
@@ -91,15 +91,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.startDateAtScheduledTaskButton addTarget:self
+    [self.startDateButton addTarget:self
                         action:@selector(pushDateButton:)
               forControlEvents:UIControlEventTouchUpInside];
     
+    // self.picturedScheduledTaskが存在する場合
     if (self.picturedScheduledTask) {
-        self.titleAtScheduledTaskTextField.text = self.picturedScheduledTask.title;
-        self.memoAtScheduledTaskTextField.text = self.picturedScheduledTask.memo;
-        self.startDateAtScheduledTaskButton.titleLabel.text = [self getStringWithDate:self.picturedScheduledTask.date];
-        if (self.picturedScheduledTask.picture) {
+        self.titleTextField.text = self.picturedScheduledTask.title;
+        self.memoTextField.text = self.picturedScheduledTask.memo;
+        self.startDateButton.titleLabel.text = [self getStringWithDate:self.picturedScheduledTask.date];
+        if ([self.picturedScheduledTask isMemberOfClass:[PicturedScheduledTask class]]) {
             self.displayImageView.image = self.picturedScheduledTask.picture;
         }
     }
@@ -135,7 +136,7 @@
 
 - (void)pushDoneButton:(id)sender {
     //dateを表示
-    self.startDateAtScheduledTaskButton.titleLabel.text = [self getStringWithDate:datePicker.date];
+    self.startDateButton.titleLabel.text = [self getStringWithDate:datePicker.date];
     
 	//ピッカーをしまう
     [actionSheet dismissWithClickedButtonIndex:0 animated:YES];
@@ -146,25 +147,26 @@
 }
 
 - (void)save:(id)sender {
-    PicturedScheduledTask *picturedScheduledTask = [PicturedScheduledTask.alloc init];
-    picturedScheduledTask.memo = self.memoAtScheduledTaskTextField.text;
-    picturedScheduledTask.title = self.titleAtScheduledTaskTextField.text;
-    picturedScheduledTask.date = [self getDateWithString:self.startDateAtScheduledTaskButton.titleLabel.text];
-    picturedScheduledTask.fileName = self.picturedScheduledTask.fileName;
-    
+    ScheduledTask *task;
+
+    // displayImageView.imageがnilなら ScheduledTaskで初期化 それ以外ならPicturedScheduledTaskで初期化
     if (self.displayImageView.image == [UIImage imageNamed:@"NOImage.jpg"]) {
-        picturedScheduledTask.picture = nil;
-    } else if (self.displayImageView.image == nil) {
-        picturedScheduledTask.picture = nil;
+        task = [ScheduledTask.alloc init];
     } else {
-        picturedScheduledTask.picture = self.displayImageView.image;
+        task = [PicturedScheduledTask.alloc initWithPicture:self.displayImageView.image];
+        [self createThumbnail:task];
     }
     
+    task.memo = self.memoTextField.text;
+    task.title = self.titleTextField.text;
+    task.date = [self getDateWithString:self.startDateButton.titleLabel.text];
+    
+    // fileNameが存在してるなら上書き保存 無いならfilenNameを日時分で保存
     if (self.picturedScheduledTask.fileName) {
-        [ScheduledTaskManager.alloc saveScheduledTask:picturedScheduledTask fileName:self.picturedScheduledTask.fileName];
+        [ScheduledTaskManager.alloc saveScheduledTask:task fileName:self.picturedScheduledTask.fileName];
     } else {
-        picturedScheduledTask.fileName = [self getScheduledTaskTitle];
-        [ScheduledTaskManager.alloc saveScheduledTask:picturedScheduledTask fileName:[self getScheduledTaskTitle]];
+        task.fileName = [self getNowDateAndTime];
+        [ScheduledTaskManager.alloc saveScheduledTask:task fileName:task.fileName];
     }
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -203,7 +205,7 @@
     { // Init DatePicker
         datePicker = [UIDatePicker.alloc initWithFrame:CGRectMake(0, 44, 320, 420)];
         datePicker.backgroundColor = [UIColor whiteColor];
-        datePicker.date = [self getDateWithString:self.startDateAtScheduledTaskButton.titleLabel.text];
+        datePicker.date = [self getDateWithString:self.startDateButton.titleLabel.text];
         [self.view addSubview:datePicker];
     }
     
@@ -214,7 +216,12 @@
 
 }
 
-- (NSString *)getScheduledTaskTitle {
+- (void)createThumbnail:(ScheduledTask *)task {
+    PicturedScheduledTask *picturedTask = (PicturedScheduledTask *)task;
+    [picturedTask createThumbnail];
+}
+
+- (NSString *)getNowDateAndTime {
     NSDate *nowDate = [NSDate.alloc init];
     NSDateFormatter *Formatter = [NSDateFormatter.alloc init];
     [Formatter setDateFormat:@"yyyyMMddHHmmss"];

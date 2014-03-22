@@ -13,7 +13,7 @@
 #import "UIImage+Resize.h"
 
 @interface ScheduledTasksViewController ()
-@property (nonatomic, strong) NSArray *scheduledTasks;
+@property (nonatomic, strong) NSMutableArray *scheduledTaskThumbnails;
 
 @end
 
@@ -36,8 +36,10 @@
     [self.collectionView registerClass:[ScheduledTaskViewCell class] forCellWithReuseIdentifier:@"MY_CELL"];
 }
 
+// cell用画像の再読み込み
 - (void)viewWillAppear:(BOOL)animated {
-    [self loadScheduledTasks];
+    self.scheduledTaskThumbnails = [NSMutableArray array];
+    self.scheduledTaskThumbnails = [ScheduledTaskManager.alloc getScheduledTasksThumbnail];
     [self.collectionView reloadData];
 }
 
@@ -49,57 +51,38 @@
 #pragma mark - Delegate
 // セクション数の指定
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return self.scheduledTasks.count;
+    return 1;
 }
 
 // セクションに応じたセルの数を返す
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [[self.scheduledTasks objectAtIndex:section] count];
+    return self.scheduledTaskThumbnails.count;
 }
 
 // セルオブジェクトを返す
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     ScheduledTaskViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MY_CELL" forIndexPath:indexPath];
-    UIImage *scheduledTaskImage = [[self.scheduledTasks[indexPath.section] objectAtIndex:indexPath.item] picture];
+    
     UIImage *cellImage;
-
-    if (scheduledTaskImage) {
-        cellImage = [scheduledTaskImage resizeIfOverSize:cell.imageView.frame.size];
-    } else {
+    if ([self.scheduledTaskThumbnails[indexPath.item] isMemberOfClass:[UIImage class]] ) {
+        cellImage = self.scheduledTaskThumbnails[indexPath.item];
+    } else if ([self.scheduledTaskThumbnails[indexPath.item]  isEqual:@""]) {
         cellImage = [[UIImage imageNamed:@"NOImage.jpg"] resizeIfOverSize:cell.imageView.frame.size];
     }
     cell.imageView.image = cellImage;
+    
     return cell;
 }
 
+// コレクションビューの選択を可能にする
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    // コレクションビューの選択を可能にする
-    // ScheduledTaskViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MY_CELL" forIndexPath:indexPath];
     RegistrationViewController *registrationViewController = [RegistrationViewController.alloc init];
-    registrationViewController.picturedScheduledTask = [self.scheduledTasks[indexPath.section] objectAtIndex:indexPath.item];
+    registrationViewController.picturedScheduledTask = [ScheduledTaskManager.alloc getDecodedScheduledTasks][indexPath.item];
     
     [self.navigationController pushViewController:registrationViewController animated:YES];
-    [registrationViewController initializeDisplayImage:[[self.scheduledTasks[indexPath.section] objectAtIndex:indexPath.item] picture]];
     
     return YES;
-}
-
-#pragma mark - Method
-
-- (void)loadScheduledTasks {
-    NSArray *scheduledTask = [ScheduledTaskManager.alloc loadScheduledTasks];
-    NSMutableArray *scheduledTasks = [NSMutableArray array];
-    NSMutableArray *tasks = [NSMutableArray array];
-    
-    int i = 0;
-    
-    for (scheduledTasks in scheduledTask) {
-        PicturedScheduledTask *task = [ScheduledTaskManager.alloc decodePictureScheduledTask:[NSString stringWithFormat:@"%@", scheduledTask[i]]];
-        [tasks addObject:task];
-        i++;
-    }
-    self.scheduledTasks = @[tasks];
 }
 
 @end

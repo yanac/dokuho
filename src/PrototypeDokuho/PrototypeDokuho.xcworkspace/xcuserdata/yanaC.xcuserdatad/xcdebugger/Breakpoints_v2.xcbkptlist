@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PrototypeDokuho/RegistrationViewController.m"
-            timestampString = "416315399.848097"
+            filePath = "PrototypeDokuho/ScheduledTasksViewController.m"
+            timestampString = "417171013.406784"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "-initializeDisplayImage:"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PrototypeDokuho/RegistrationViewController.m"
-            timestampString = "416318205.958109"
+            filePath = "PrototypeDokuho/ScheduledTasksViewController.m"
+            timestampString = "417171013.406784"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
-            landmarkName = "-save:"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PrototypeDokuho/RegistrationViewController.m"
-            timestampString = "416318205.958109"
+            filePath = "PrototypeDokuho/ScheduledTasksViewController.m"
+            timestampString = "417171013.406784"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,13 +57,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PrototypeDokuho/RegistrationViewController.m"
-            timestampString = "416318214.865068"
+            filePath = "PrototypeDokuho/ScheduledTasksViewController.m"
+            timestampString = "417171013.406784"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "-loadView"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "-collectionView:cellForItemAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PrototypeDokuho/ScheduledTasksViewController.m"
+            timestampString = "417171013.406784"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "-collectionView:cellForItemAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PrototypeDokuho/ScheduledTaskManager.m"
+            timestampString = "417171013.406784"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "-getScheduledTasksThumbnail"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
