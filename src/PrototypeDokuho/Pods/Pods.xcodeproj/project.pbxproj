@@ -1,1470 +1,555 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>06F1331EAF644E28AB59338E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>GTMNSDictionary+URLArguments.m</string>
-			<key>path</key>
-			<string>Foundation/GTMNSDictionary+URLArguments.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0C7A3624E3414EA29B6A39FE</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>67E5DA6B691D4DEF8E58F9E2</string>
-			<key>buildPhases</key>
-			<array>
-				<string>444C36EA5A3D4C258DF401AA</string>
-				<string>33D118B05CAD46FC84CD3A0A</string>
-				<string>74CCFF986AF14283AD0FBA53</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-google-toolbox-for-ios</string>
-			<key>productName</key>
-			<string>Pods-google-toolbox-for-ios</string>
-			<key>productReference</key>
-			<string>7D4992A02ADE4E1EBA882195</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>0E0660BB0D42490A911F0538</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>0C7A3624E3414EA29B6A39FE</string>
-			<key>targetProxy</key>
-			<string>5608D569D228429F88862B35</string>
-		</dict>
-		<key>0EE6E6E1EC2F418AA9C562C5</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>AD788C1897E64D979388DD75</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>12B378DBBB614D2B9A3F2616</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>90BC6863024246C2B550F494</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>148A40F48EAB4860B4214FC0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C9D3CBBDC76F44EDB2E498C8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1709A3F9F825445EA9CFE13B</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>4CB2A9F145DE496298AADCBA</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Pods-google-toolbox-for-ios-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>1759C26001F84E6EBFA7C16B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GTMRoundedRectPath.h</string>
-			<key>path</key>
-			<string>iPhone/GTMRoundedRectPath.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>17E5ADD9AA864C68A6C52F43</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CBEAD2EDFB9C4BAABFAF7305</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1AC11A99474844E8A97F999C</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>0EE6E6E1EC2F418AA9C562C5</string>
-				<string>987742B0CD3B48FAA327F0A0</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>1B06ABC8C6204ECA8FF210EE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GTMNSString+URLArguments.h</string>
-			<key>path</key>
-			<string>Foundation/GTMNSString+URLArguments.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1C1591408F1C4E72BDD969A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E90A5F3680D34703B1BEC397</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1C8E936A7D384918B5D11B10</key>
-		<dict>
-			<key>fileRef</key>
-			<string>370A0769B202433A8AFC86FF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>202EE30EE8C24EAEA25ECF5D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GTMUIImage+Resize.h</string>
-			<key>path</key>
-			<string>iPhone/GTMUIImage+Resize.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>23A295B7CBA944139A92891C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FE21B7278D3641D883A146D2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>24E1EA766A3D4C868965361D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>38ABF6690F184EB4BB0C33EC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>29A5632E2C884A158B2DBC11</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-google-toolbox-for-ios-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2C0F3F1DA68A4034B6BB21D4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>377D199DEFD649B98EADB10B</string>
-				<string>E0E0C73FAAE14BE5945E1398</string>
-				<string>12B378DBBB614D2B9A3F2616</string>
-				<string>BD2739DEF2C04CF387981E55</string>
-				<string>E51807F9E00E4911A1D8659C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>32532B9B57544268A8C13E06</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>828D83C60CBB488BA0C387C0</string>
-				<string>99538F778F554562AD618C84</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>33D118B05CAD46FC84CD3A0A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>822FED8B32B04CF5839B9F33</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>370A0769B202433A8AFC86FF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GTMBase64.h</string>
-			<key>path</key>
-			<string>Foundation/GTMBase64.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>377D199DEFD649B98EADB10B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>38ABF6690F184EB4BB0C33EC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>GTMBase64.m</string>
-			<key>path</key>
-			<string>Foundation/GTMBase64.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3AE0EDBD3B0B4ABCAA22C24C</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0500</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>32532B9B57544268A8C13E06</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>2C0F3F1DA68A4034B6BB21D4</string>
-			<key>productRefGroup</key>
-			<string>BD2739DEF2C04CF387981E55</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>6470DFA6FF17482B90A00D98</string>
-				<string>0C7A3624E3414EA29B6A39FE</string>
-			</array>
-		</dict>
-		<key>3D78A9F8E78242D292D10215</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>GTMUIImage+Resize.m</string>
-			<key>path</key>
-			<string>iPhone/GTMUIImage+Resize.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>444C36EA5A3D4C258DF401AA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>24E1EA766A3D4C868965361D</string>
-				<string>8A6EECEBB1D547C89CB9E984</string>
-				<string>D245E885C1F44E73978F98C0</string>
-				<string>D68BB7BD9A4340629FF94084</string>
-				<string>CC6692D0512D46FA89E3A334</string>
-				<string>63415EB00A424927BC78D765</string>
-				<string>95ADAA68C95645179E93FBD5</string>
-				<string>17E5ADD9AA864C68A6C52F43</string>
-				<string>F578DD6D4652405A9A87DE62</string>
-				<string>7BCB1EE17CCF4B6E8B44C247</string>
-				<string>23A295B7CBA944139A92891C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4CB2A9F145DE496298AADCBA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-google-toolbox-for-ios-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5402D7A4B4874CDFB2D450BE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BC7425097A6246FFAAB3C5B6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5608D569D228429F88862B35</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>3AE0EDBD3B0B4ABCAA22C24C</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>0C7A3624E3414EA29B6A39FE</string>
-			<key>remoteInfo</key>
-			<string>Pods-google-toolbox-for-ios</string>
-		</dict>
-		<key>592315C67E6A4C6ABB91C776</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>GTMNSDictionary+CaseInsensitive.m</string>
-			<key>path</key>
-			<string>Foundation/GTMNSDictionary+CaseInsensitive.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5A80F68985C448C082319B08</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GTMUIView+SubtreeDescription.h</string>
-			<key>path</key>
-			<string>iPhone/GTMUIView+SubtreeDescription.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>617D282150D24E1697B8AC21</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>63415EB00A424927BC78D765</key>
-		<dict>
-			<key>fileRef</key>
-			<string>AAB544F866B84B04B03BC636</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>6470DFA6FF17482B90A00D98</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>1AC11A99474844E8A97F999C</string>
-			<key>buildPhases</key>
-			<array>
-				<string>977E4BD6F4D34952A1A543F8</string>
-				<string>66C89502A14F4597A3F80BCC</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>0E0660BB0D42490A911F0538</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>productName</key>
-			<string>Pods</string>
-			<key>productReference</key>
-			<string>9B795276CBE34957A95AA91C</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>66C89502A14F4597A3F80BCC</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>8FD86B31A63B457EBF938B69</string>
-				<string>AA0975C97CCD4BE1ABD07631</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>67E5DA6B691D4DEF8E58F9E2</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>1709A3F9F825445EA9CFE13B</string>
-				<string>8FAF0682235A43D0B489799C</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>6829CD4113C74B838A333BCB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1B06ABC8C6204ECA8FF210EE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>6AA55B41E30D4AC3AA62AC97</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>GTMDefines.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>72F1A80682674CD8B4EFA5EC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1759C26001F84E6EBFA7C16B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>74CCFF986AF14283AD0FBA53</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>1C8E936A7D384918B5D11B10</string>
-				<string>D10236105A284BB1AEC3A90B</string>
-				<string>9022E1E046854E02A34D1166</string>
-				<string>BF352155894D422681DA48F5</string>
-				<string>7DC6957088C9414EA9B95A85</string>
-				<string>B381216B0411454C8049BCAE</string>
-				<string>148A40F48EAB4860B4214FC0</string>
-				<string>EF37A6F59F6D4F3392555C22</string>
-				<string>6829CD4113C74B838A333BCB</string>
-				<string>1C1591408F1C4E72BDD969A5</string>
-				<string>72F1A80682674CD8B4EFA5EC</string>
-				<string>F4D592981B1C40FE984A875F</string>
-				<string>7FE49E4C234F4B8DA55A46CA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7BCB1EE17CCF4B6E8B44C247</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9E93EE855CDC4F7A8221CB0D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7D4992A02ADE4E1EBA882195</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-google-toolbox-for-ios.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>7DC6957088C9414EA9B95A85</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BD8BD0FA8EAC4241AD454760</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7FE49E4C234F4B8DA55A46CA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5A80F68985C448C082319B08</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>822FED8B32B04CF5839B9F33</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BC7425097A6246FFAAB3C5B6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>828D83C60CBB488BA0C387C0</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>NO</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>8A6EECEBB1D547C89CB9E984</key>
-		<dict>
-			<key>fileRef</key>
-			<string>592315C67E6A4C6ABB91C776</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8FAF0682235A43D0B489799C</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>4CB2A9F145DE496298AADCBA</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Pods-google-toolbox-for-ios-prefix.pch</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>8FD86B31A63B457EBF938B69</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BC7425097A6246FFAAB3C5B6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9022E1E046854E02A34D1166</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C27470AF53D047C9B6BB44C7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90BC6863024246C2B550F494</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>370A0769B202433A8AFC86FF</string>
-				<string>38ABF6690F184EB4BB0C33EC</string>
-				<string>6AA55B41E30D4AC3AA62AC97</string>
-				<string>C27470AF53D047C9B6BB44C7</string>
-				<string>D1FCB97A184F411DBBACA6CF</string>
-				<string>BD8BD0FA8EAC4241AD454760</string>
-				<string>592315C67E6A4C6ABB91C776</string>
-				<string>9BE6772D7AAB4833A61B0859</string>
-				<string>06F1331EAF644E28AB59338E</string>
-				<string>C9D3CBBDC76F44EDB2E498C8</string>
-				<string>F7A277B1C47541BFB68F9266</string>
-				<string>D22A852473A040C38DF9BBBD</string>
-				<string>DDB5E30E1C384D66BBBF71FC</string>
-				<string>1B06ABC8C6204ECA8FF210EE</string>
-				<string>AAB544F866B84B04B03BC636</string>
-				<string>E90A5F3680D34703B1BEC397</string>
-				<string>CEFD21A0C1C045A4B0E007FC</string>
-				<string>1759C26001F84E6EBFA7C16B</string>
-				<string>CBEAD2EDFB9C4BAABFAF7305</string>
-				<string>202EE30EE8C24EAEA25ECF5D</string>
-				<string>3D78A9F8E78242D292D10215</string>
-				<string>5A80F68985C448C082319B08</string>
-				<string>9E93EE855CDC4F7A8221CB0D</string>
-				<string>D6ECFF799784491D9843E9EA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>google-toolbox-for-ios</string>
-			<key>path</key>
-			<string>google-toolbox-for-ios</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>95ADAA68C95645179E93FBD5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CEFD21A0C1C045A4B0E007FC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>977E4BD6F4D34952A1A543F8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>FE129D92A5DA4880AA7C25F2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>97866B2FABDC46ED8B8680C9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>987742B0CD3B48FAA327F0A0</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>AD788C1897E64D979388DD75</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>99538F778F554562AD618C84</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>NO</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>99BF87E652AB4DEDAC3A900D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9B795276CBE34957A95AA91C</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>9BE6772D7AAB4833A61B0859</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GTMNSDictionary+URLArguments.h</string>
-			<key>path</key>
-			<string>Foundation/GTMNSDictionary+URLArguments.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9E93EE855CDC4F7A8221CB0D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>GTMUIView+SubtreeDescription.m</string>
-			<key>path</key>
-			<string>iPhone/GTMUIView+SubtreeDescription.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AA0975C97CCD4BE1ABD07631</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7D4992A02ADE4E1EBA882195</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>AAB544F866B84B04B03BC636</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>GTMNSString+URLArguments.m</string>
-			<key>path</key>
-			<string>Foundation/GTMNSString+URLArguments.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AD788C1897E64D979388DD75</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B17F4DC5EA0C4C22A6D28FB8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B381216B0411454C8049BCAE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9BE6772D7AAB4833A61B0859</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BC7425097A6246FFAAB3C5B6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>BD2739DEF2C04CF387981E55</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9B795276CBE34957A95AA91C</string>
-				<string>7D4992A02ADE4E1EBA882195</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD8BD0FA8EAC4241AD454760</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GTMNSDictionary+CaseInsensitive.h</string>
-			<key>path</key>
-			<string>Foundation/GTMNSDictionary+CaseInsensitive.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BF352155894D422681DA48F5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D1FCB97A184F411DBBACA6CF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C27470AF53D047C9B6BB44C7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GTMGarbageCollection.h</string>
-			<key>path</key>
-			<string>Foundation/GTMGarbageCollection.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C9D3CBBDC76F44EDB2E498C8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GTMNSString+HTML.h</string>
-			<key>path</key>
-			<string>Foundation/GTMNSString+HTML.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CBEAD2EDFB9C4BAABFAF7305</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>GTMRoundedRectPath.m</string>
-			<key>path</key>
-			<string>iPhone/GTMRoundedRectPath.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CC6692D0512D46FA89E3A334</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DDB5E30E1C384D66BBBF71FC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CEFD21A0C1C045A4B0E007FC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>GTMNSString+XML.m</string>
-			<key>path</key>
-			<string>Foundation/GTMNSString+XML.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D10236105A284BB1AEC3A90B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6AA55B41E30D4AC3AA62AC97</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D1FCB97A184F411DBBACA6CF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GTMMethodCheck.h</string>
-			<key>path</key>
-			<string>NeetHouse/GTMMethodCheck.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D22A852473A040C38DF9BBBD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GTMNSString+Replace.h</string>
-			<key>path</key>
-			<string>Foundation/GTMNSString+Replace.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D245E885C1F44E73978F98C0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>06F1331EAF644E28AB59338E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D593C3DBC1BC4B2880D48964</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>AD788C1897E64D979388DD75</string>
-				<string>617D282150D24E1697B8AC21</string>
-				<string>99BF87E652AB4DEDAC3A900D</string>
-				<string>97866B2FABDC46ED8B8680C9</string>
-				<string>DEE94AF07A2F49D4B63E0B14</string>
-				<string>B17F4DC5EA0C4C22A6D28FB8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D68BB7BD9A4340629FF94084</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F7A277B1C47541BFB68F9266</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D6ECFF799784491D9843E9EA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F0C5559F9BDD44FEA0133F3B</string>
-				<string>4CB2A9F145DE496298AADCBA</string>
-				<string>FE21B7278D3641D883A146D2</string>
-				<string>29A5632E2C884A158B2DBC11</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>DDB5E30E1C384D66BBBF71FC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>GTMNSString+Replace.m</string>
-			<key>path</key>
-			<string>Foundation/GTMNSString+Replace.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DEE94AF07A2F49D4B63E0B14</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-environment.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E0E0C73FAAE14BE5945E1398</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5402D7A4B4874CDFB2D450BE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E51807F9E00E4911A1D8659C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D593C3DBC1BC4B2880D48964</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E90A5F3680D34703B1BEC397</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GTMNSString+XML.h</string>
-			<key>path</key>
-			<string>Foundation/GTMNSString+XML.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EF37A6F59F6D4F3392555C22</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D22A852473A040C38DF9BBBD</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F0C5559F9BDD44FEA0133F3B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-google-toolbox-for-ios.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F4D592981B1C40FE984A875F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>202EE30EE8C24EAEA25ECF5D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F578DD6D4652405A9A87DE62</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3D78A9F8E78242D292D10215</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F7A277B1C47541BFB68F9266</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>GTMNSString+HTML.m</string>
-			<key>path</key>
-			<string>Foundation/GTMNSString+HTML.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FE129D92A5DA4880AA7C25F2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>97866B2FABDC46ED8B8680C9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FE21B7278D3641D883A146D2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-google-toolbox-for-ios-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>3AE0EDBD3B0B4ABCAA22C24C</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		148A40F48EAB4860B4214FC0 /* GTMNSString+HTML.h in Headers */ = {isa = PBXBuildFile; fileRef = C9D3CBBDC76F44EDB2E498C8 /* GTMNSString+HTML.h */; };
+		17E5ADD9AA864C68A6C52F43 /* GTMRoundedRectPath.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEAD2EDFB9C4BAABFAF7305 /* GTMRoundedRectPath.m */; };
+		1C1591408F1C4E72BDD969A5 /* GTMNSString+XML.h in Headers */ = {isa = PBXBuildFile; fileRef = E90A5F3680D34703B1BEC397 /* GTMNSString+XML.h */; };
+		1C8E936A7D384918B5D11B10 /* GTMBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 370A0769B202433A8AFC86FF /* GTMBase64.h */; };
+		23A295B7CBA944139A92891C /* Pods-google-toolbox-for-ios-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE21B7278D3641D883A146D2 /* Pods-google-toolbox-for-ios-dummy.m */; };
+		24E1EA766A3D4C868965361D /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ABF6690F184EB4BB0C33EC /* GTMBase64.m */; };
+		63415EB00A424927BC78D765 /* GTMNSString+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB544F866B84B04B03BC636 /* GTMNSString+URLArguments.m */; };
+		6829CD4113C74B838A333BCB /* GTMNSString+URLArguments.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B06ABC8C6204ECA8FF210EE /* GTMNSString+URLArguments.h */; };
+		72F1A80682674CD8B4EFA5EC /* GTMRoundedRectPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 1759C26001F84E6EBFA7C16B /* GTMRoundedRectPath.h */; };
+		7BCB1EE17CCF4B6E8B44C247 /* GTMUIView+SubtreeDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E93EE855CDC4F7A8221CB0D /* GTMUIView+SubtreeDescription.m */; };
+		7DC6957088C9414EA9B95A85 /* GTMNSDictionary+CaseInsensitive.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8BD0FA8EAC4241AD454760 /* GTMNSDictionary+CaseInsensitive.h */; };
+		7FE49E4C234F4B8DA55A46CA /* GTMUIView+SubtreeDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A80F68985C448C082319B08 /* GTMUIView+SubtreeDescription.h */; };
+		822FED8B32B04CF5839B9F33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7425097A6246FFAAB3C5B6 /* Foundation.framework */; };
+		8A6EECEBB1D547C89CB9E984 /* GTMNSDictionary+CaseInsensitive.m in Sources */ = {isa = PBXBuildFile; fileRef = 592315C67E6A4C6ABB91C776 /* GTMNSDictionary+CaseInsensitive.m */; };
+		8FD86B31A63B457EBF938B69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7425097A6246FFAAB3C5B6 /* Foundation.framework */; };
+		9022E1E046854E02A34D1166 /* GTMGarbageCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = C27470AF53D047C9B6BB44C7 /* GTMGarbageCollection.h */; };
+		95ADAA68C95645179E93FBD5 /* GTMNSString+XML.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFD21A0C1C045A4B0E007FC /* GTMNSString+XML.m */; };
+		AA0975C97CCD4BE1ABD07631 /* libPods-google-toolbox-for-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D4992A02ADE4E1EBA882195 /* libPods-google-toolbox-for-ios.a */; };
+		B381216B0411454C8049BCAE /* GTMNSDictionary+URLArguments.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BE6772D7AAB4833A61B0859 /* GTMNSDictionary+URLArguments.h */; };
+		BF352155894D422681DA48F5 /* GTMMethodCheck.h in Headers */ = {isa = PBXBuildFile; fileRef = D1FCB97A184F411DBBACA6CF /* GTMMethodCheck.h */; };
+		CC6692D0512D46FA89E3A334 /* GTMNSString+Replace.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB5E30E1C384D66BBBF71FC /* GTMNSString+Replace.m */; };
+		D10236105A284BB1AEC3A90B /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AA55B41E30D4AC3AA62AC97 /* GTMDefines.h */; };
+		D245E885C1F44E73978F98C0 /* GTMNSDictionary+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F1331EAF644E28AB59338E /* GTMNSDictionary+URLArguments.m */; };
+		D68BB7BD9A4340629FF94084 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A277B1C47541BFB68F9266 /* GTMNSString+HTML.m */; };
+		EF37A6F59F6D4F3392555C22 /* GTMNSString+Replace.h in Headers */ = {isa = PBXBuildFile; fileRef = D22A852473A040C38DF9BBBD /* GTMNSString+Replace.h */; };
+		F4D592981B1C40FE984A875F /* GTMUIImage+Resize.h in Headers */ = {isa = PBXBuildFile; fileRef = 202EE30EE8C24EAEA25ECF5D /* GTMUIImage+Resize.h */; };
+		F578DD6D4652405A9A87DE62 /* GTMUIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D78A9F8E78242D292D10215 /* GTMUIImage+Resize.m */; };
+		FE129D92A5DA4880AA7C25F2 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 97866B2FABDC46ED8B8680C9 /* Pods-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5608D569D228429F88862B35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AE0EDBD3B0B4ABCAA22C24C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C7A3624E3414EA29B6A39FE;
+			remoteInfo = "Pods-google-toolbox-for-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06F1331EAF644E28AB59338E /* GTMNSDictionary+URLArguments.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSDictionary+URLArguments.m"; path = "Foundation/GTMNSDictionary+URLArguments.m"; sourceTree = "<group>"; };
+		1759C26001F84E6EBFA7C16B /* GTMRoundedRectPath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMRoundedRectPath.h; path = iPhone/GTMRoundedRectPath.h; sourceTree = "<group>"; };
+		1B06ABC8C6204ECA8FF210EE /* GTMNSString+URLArguments.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSString+URLArguments.h"; path = "Foundation/GTMNSString+URLArguments.h"; sourceTree = "<group>"; };
+		202EE30EE8C24EAEA25ECF5D /* GTMUIImage+Resize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMUIImage+Resize.h"; path = "iPhone/GTMUIImage+Resize.h"; sourceTree = "<group>"; };
+		29A5632E2C884A158B2DBC11 /* Pods-google-toolbox-for-ios-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-google-toolbox-for-ios-prefix.pch"; sourceTree = "<group>"; };
+		370A0769B202433A8AFC86FF /* GTMBase64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMBase64.h; path = Foundation/GTMBase64.h; sourceTree = "<group>"; };
+		377D199DEFD649B98EADB10B /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		38ABF6690F184EB4BB0C33EC /* GTMBase64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMBase64.m; path = Foundation/GTMBase64.m; sourceTree = "<group>"; };
+		3D78A9F8E78242D292D10215 /* GTMUIImage+Resize.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMUIImage+Resize.m"; path = "iPhone/GTMUIImage+Resize.m"; sourceTree = "<group>"; };
+		4CB2A9F145DE496298AADCBA /* Pods-google-toolbox-for-ios-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-google-toolbox-for-ios-Private.xcconfig"; sourceTree = "<group>"; };
+		592315C67E6A4C6ABB91C776 /* GTMNSDictionary+CaseInsensitive.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSDictionary+CaseInsensitive.m"; path = "Foundation/GTMNSDictionary+CaseInsensitive.m"; sourceTree = "<group>"; };
+		5A80F68985C448C082319B08 /* GTMUIView+SubtreeDescription.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMUIView+SubtreeDescription.h"; path = "iPhone/GTMUIView+SubtreeDescription.h"; sourceTree = "<group>"; };
+		617D282150D24E1697B8AC21 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6AA55B41E30D4AC3AA62AC97 /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		7D4992A02ADE4E1EBA882195 /* libPods-google-toolbox-for-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-google-toolbox-for-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97866B2FABDC46ED8B8680C9 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		99BF87E652AB4DEDAC3A900D /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		9B795276CBE34957A95AA91C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BE6772D7AAB4833A61B0859 /* GTMNSDictionary+URLArguments.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSDictionary+URLArguments.h"; path = "Foundation/GTMNSDictionary+URLArguments.h"; sourceTree = "<group>"; };
+		9E93EE855CDC4F7A8221CB0D /* GTMUIView+SubtreeDescription.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMUIView+SubtreeDescription.m"; path = "iPhone/GTMUIView+SubtreeDescription.m"; sourceTree = "<group>"; };
+		AAB544F866B84B04B03BC636 /* GTMNSString+URLArguments.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSString+URLArguments.m"; path = "Foundation/GTMNSString+URLArguments.m"; sourceTree = "<group>"; };
+		AD788C1897E64D979388DD75 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.xcconfig; sourceTree = "<group>"; };
+		B17F4DC5EA0C4C22A6D28FB8 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		BC7425097A6246FFAAB3C5B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		BD8BD0FA8EAC4241AD454760 /* GTMNSDictionary+CaseInsensitive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSDictionary+CaseInsensitive.h"; path = "Foundation/GTMNSDictionary+CaseInsensitive.h"; sourceTree = "<group>"; };
+		C27470AF53D047C9B6BB44C7 /* GTMGarbageCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMGarbageCollection.h; path = Foundation/GTMGarbageCollection.h; sourceTree = "<group>"; };
+		C9D3CBBDC76F44EDB2E498C8 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSString+HTML.h"; path = "Foundation/GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		CBEAD2EDFB9C4BAABFAF7305 /* GTMRoundedRectPath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMRoundedRectPath.m; path = iPhone/GTMRoundedRectPath.m; sourceTree = "<group>"; };
+		CEFD21A0C1C045A4B0E007FC /* GTMNSString+XML.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSString+XML.m"; path = "Foundation/GTMNSString+XML.m"; sourceTree = "<group>"; };
+		D1FCB97A184F411DBBACA6CF /* GTMMethodCheck.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMMethodCheck.h; path = NeetHouse/GTMMethodCheck.h; sourceTree = "<group>"; };
+		D22A852473A040C38DF9BBBD /* GTMNSString+Replace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSString+Replace.h"; path = "Foundation/GTMNSString+Replace.h"; sourceTree = "<group>"; };
+		DDB5E30E1C384D66BBBF71FC /* GTMNSString+Replace.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSString+Replace.m"; path = "Foundation/GTMNSString+Replace.m"; sourceTree = "<group>"; };
+		DEE94AF07A2F49D4B63E0B14 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		E90A5F3680D34703B1BEC397 /* GTMNSString+XML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSString+XML.h"; path = "Foundation/GTMNSString+XML.h"; sourceTree = "<group>"; };
+		F0C5559F9BDD44FEA0133F3B /* Pods-google-toolbox-for-ios.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-google-toolbox-for-ios.xcconfig"; sourceTree = "<group>"; };
+		F7A277B1C47541BFB68F9266 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSString+HTML.m"; path = "Foundation/GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		FE21B7278D3641D883A146D2 /* Pods-google-toolbox-for-ios-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-google-toolbox-for-ios-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		33D118B05CAD46FC84CD3A0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				822FED8B32B04CF5839B9F33 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66C89502A14F4597A3F80BCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FD86B31A63B457EBF938B69 /* Foundation.framework in Frameworks */,
+				AA0975C97CCD4BE1ABD07631 /* libPods-google-toolbox-for-ios.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12B378DBBB614D2B9A3F2616 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90BC6863024246C2B550F494 /* google-toolbox-for-ios */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2C0F3F1DA68A4034B6BB21D4 = {
+			isa = PBXGroup;
+			children = (
+				377D199DEFD649B98EADB10B /* Podfile */,
+				E0E0C73FAAE14BE5945E1398 /* Frameworks */,
+				12B378DBBB614D2B9A3F2616 /* Pods */,
+				BD2739DEF2C04CF387981E55 /* Products */,
+				E51807F9E00E4911A1D8659C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		5402D7A4B4874CDFB2D450BE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BC7425097A6246FFAAB3C5B6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		90BC6863024246C2B550F494 /* google-toolbox-for-ios */ = {
+			isa = PBXGroup;
+			children = (
+				370A0769B202433A8AFC86FF /* GTMBase64.h */,
+				38ABF6690F184EB4BB0C33EC /* GTMBase64.m */,
+				6AA55B41E30D4AC3AA62AC97 /* GTMDefines.h */,
+				C27470AF53D047C9B6BB44C7 /* GTMGarbageCollection.h */,
+				D1FCB97A184F411DBBACA6CF /* GTMMethodCheck.h */,
+				BD8BD0FA8EAC4241AD454760 /* GTMNSDictionary+CaseInsensitive.h */,
+				592315C67E6A4C6ABB91C776 /* GTMNSDictionary+CaseInsensitive.m */,
+				9BE6772D7AAB4833A61B0859 /* GTMNSDictionary+URLArguments.h */,
+				06F1331EAF644E28AB59338E /* GTMNSDictionary+URLArguments.m */,
+				C9D3CBBDC76F44EDB2E498C8 /* GTMNSString+HTML.h */,
+				F7A277B1C47541BFB68F9266 /* GTMNSString+HTML.m */,
+				D22A852473A040C38DF9BBBD /* GTMNSString+Replace.h */,
+				DDB5E30E1C384D66BBBF71FC /* GTMNSString+Replace.m */,
+				1B06ABC8C6204ECA8FF210EE /* GTMNSString+URLArguments.h */,
+				AAB544F866B84B04B03BC636 /* GTMNSString+URLArguments.m */,
+				E90A5F3680D34703B1BEC397 /* GTMNSString+XML.h */,
+				CEFD21A0C1C045A4B0E007FC /* GTMNSString+XML.m */,
+				1759C26001F84E6EBFA7C16B /* GTMRoundedRectPath.h */,
+				CBEAD2EDFB9C4BAABFAF7305 /* GTMRoundedRectPath.m */,
+				202EE30EE8C24EAEA25ECF5D /* GTMUIImage+Resize.h */,
+				3D78A9F8E78242D292D10215 /* GTMUIImage+Resize.m */,
+				5A80F68985C448C082319B08 /* GTMUIView+SubtreeDescription.h */,
+				9E93EE855CDC4F7A8221CB0D /* GTMUIView+SubtreeDescription.m */,
+				D6ECFF799784491D9843E9EA /* Support Files */,
+			);
+			path = "google-toolbox-for-ios";
+			sourceTree = "<group>";
+		};
+		BD2739DEF2C04CF387981E55 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B795276CBE34957A95AA91C /* libPods.a */,
+				7D4992A02ADE4E1EBA882195 /* libPods-google-toolbox-for-ios.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D593C3DBC1BC4B2880D48964 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD788C1897E64D979388DD75 /* Pods.xcconfig */,
+				617D282150D24E1697B8AC21 /* Pods-acknowledgements.markdown */,
+				99BF87E652AB4DEDAC3A900D /* Pods-acknowledgements.plist */,
+				97866B2FABDC46ED8B8680C9 /* Pods-dummy.m */,
+				DEE94AF07A2F49D4B63E0B14 /* Pods-environment.h */,
+				B17F4DC5EA0C4C22A6D28FB8 /* Pods-resources.sh */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D6ECFF799784491D9843E9EA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F0C5559F9BDD44FEA0133F3B /* Pods-google-toolbox-for-ios.xcconfig */,
+				4CB2A9F145DE496298AADCBA /* Pods-google-toolbox-for-ios-Private.xcconfig */,
+				FE21B7278D3641D883A146D2 /* Pods-google-toolbox-for-ios-dummy.m */,
+				29A5632E2C884A158B2DBC11 /* Pods-google-toolbox-for-ios-prefix.pch */,
+			);
+			name = "Support Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		E0E0C73FAAE14BE5945E1398 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5402D7A4B4874CDFB2D450BE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E51807F9E00E4911A1D8659C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D593C3DBC1BC4B2880D48964 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		74CCFF986AF14283AD0FBA53 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C8E936A7D384918B5D11B10 /* GTMBase64.h in Headers */,
+				D10236105A284BB1AEC3A90B /* GTMDefines.h in Headers */,
+				9022E1E046854E02A34D1166 /* GTMGarbageCollection.h in Headers */,
+				BF352155894D422681DA48F5 /* GTMMethodCheck.h in Headers */,
+				7DC6957088C9414EA9B95A85 /* GTMNSDictionary+CaseInsensitive.h in Headers */,
+				B381216B0411454C8049BCAE /* GTMNSDictionary+URLArguments.h in Headers */,
+				148A40F48EAB4860B4214FC0 /* GTMNSString+HTML.h in Headers */,
+				EF37A6F59F6D4F3392555C22 /* GTMNSString+Replace.h in Headers */,
+				6829CD4113C74B838A333BCB /* GTMNSString+URLArguments.h in Headers */,
+				1C1591408F1C4E72BDD969A5 /* GTMNSString+XML.h in Headers */,
+				72F1A80682674CD8B4EFA5EC /* GTMRoundedRectPath.h in Headers */,
+				F4D592981B1C40FE984A875F /* GTMUIImage+Resize.h in Headers */,
+				7FE49E4C234F4B8DA55A46CA /* GTMUIView+SubtreeDescription.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0C7A3624E3414EA29B6A39FE /* Pods-google-toolbox-for-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67E5DA6B691D4DEF8E58F9E2 /* Build configuration list for PBXNativeTarget "Pods-google-toolbox-for-ios" */;
+			buildPhases = (
+				444C36EA5A3D4C258DF401AA /* Sources */,
+				33D118B05CAD46FC84CD3A0A /* Frameworks */,
+				74CCFF986AF14283AD0FBA53 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-google-toolbox-for-ios";
+			productName = "Pods-google-toolbox-for-ios";
+			productReference = 7D4992A02ADE4E1EBA882195 /* libPods-google-toolbox-for-ios.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6470DFA6FF17482B90A00D98 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AC11A99474844E8A97F999C /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				977E4BD6F4D34952A1A543F8 /* Sources */,
+				66C89502A14F4597A3F80BCC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E0660BB0D42490A911F0538 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 9B795276CBE34957A95AA91C /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3AE0EDBD3B0B4ABCAA22C24C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 32532B9B57544268A8C13E06 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2C0F3F1DA68A4034B6BB21D4;
+			productRefGroup = BD2739DEF2C04CF387981E55 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6470DFA6FF17482B90A00D98 /* Pods */,
+				0C7A3624E3414EA29B6A39FE /* Pods-google-toolbox-for-ios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		444C36EA5A3D4C258DF401AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24E1EA766A3D4C868965361D /* GTMBase64.m in Sources */,
+				8A6EECEBB1D547C89CB9E984 /* GTMNSDictionary+CaseInsensitive.m in Sources */,
+				D245E885C1F44E73978F98C0 /* GTMNSDictionary+URLArguments.m in Sources */,
+				D68BB7BD9A4340629FF94084 /* GTMNSString+HTML.m in Sources */,
+				CC6692D0512D46FA89E3A334 /* GTMNSString+Replace.m in Sources */,
+				63415EB00A424927BC78D765 /* GTMNSString+URLArguments.m in Sources */,
+				95ADAA68C95645179E93FBD5 /* GTMNSString+XML.m in Sources */,
+				17E5ADD9AA864C68A6C52F43 /* GTMRoundedRectPath.m in Sources */,
+				F578DD6D4652405A9A87DE62 /* GTMUIImage+Resize.m in Sources */,
+				7BCB1EE17CCF4B6E8B44C247 /* GTMUIView+SubtreeDescription.m in Sources */,
+				23A295B7CBA944139A92891C /* Pods-google-toolbox-for-ios-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		977E4BD6F4D34952A1A543F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE129D92A5DA4880AA7C25F2 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0E0660BB0D42490A911F0538 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C7A3624E3414EA29B6A39FE /* Pods-google-toolbox-for-ios */;
+			targetProxy = 5608D569D228429F88862B35 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0EE6E6E1EC2F418AA9C562C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD788C1897E64D979388DD75 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1709A3F9F825445EA9CFE13B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CB2A9F145DE496298AADCBA /* Pods-google-toolbox-for-ios-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-google-toolbox-for-ios-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		828D83C60CBB488BA0C387C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		8FAF0682235A43D0B489799C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CB2A9F145DE496298AADCBA /* Pods-google-toolbox-for-ios-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-google-toolbox-for-ios-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		987742B0CD3B48FAA327F0A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD788C1897E64D979388DD75 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		99538F778F554562AD618C84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1AC11A99474844E8A97F999C /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EE6E6E1EC2F418AA9C562C5 /* Debug */,
+				987742B0CD3B48FAA327F0A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32532B9B57544268A8C13E06 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				828D83C60CBB488BA0C387C0 /* Debug */,
+				99538F778F554562AD618C84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67E5DA6B691D4DEF8E58F9E2 /* Build configuration list for PBXNativeTarget "Pods-google-toolbox-for-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1709A3F9F825445EA9CFE13B /* Debug */,
+				8FAF0682235A43D0B489799C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3AE0EDBD3B0B4ABCAA22C24C /* Project object */;
+}

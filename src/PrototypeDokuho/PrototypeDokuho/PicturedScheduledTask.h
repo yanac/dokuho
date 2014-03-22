@@ -12,6 +12,10 @@
 
 @property (nonatomic) UIImage *picture;
 
+@property (nonatomic) UIImage *thumbnail;
+
 - (instancetype)initWithPicture:(UIImage *)picture;
+
+- (void)createThumbnail;
 
 @end
