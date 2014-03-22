@@ -16,7 +16,7 @@
         _title = title;
         _date = date;
         _memo = memo;
-        _fileNmae = fileName;
+        _fileName = fileName;
     }
     return self;
 }
@@ -27,7 +27,7 @@
         _title = [aDecoder decodeObjectForKey:@"titleAtScheduledTask"];
         _date = [aDecoder decodeObjectForKey:@"startDateAtScheduledTask"];
         _memo = [aDecoder decodeObjectForKey:@"memo"];
-        _fileNmae = [aDecoder decodeObjectForKey:@"fileNmae"];
+        _fileName = [aDecoder decodeObjectForKey:@"fileName"];
     }
     return self;
 }
@@ -36,7 +36,7 @@
     [aCoder encodeObject:_title forKey:@"titleAtScheduledTask"];
     [aCoder encodeObject:_date forKey:@"startDateAtScheduledTask"];
     [aCoder encodeObject:_memo forKey:@"memo"];
-    [aCoder encodeObject:_fileNmae forKey:@"fileName"];
+    [aCoder encodeObject:_fileName forKey:@"fileName"];
 }
 
 @end

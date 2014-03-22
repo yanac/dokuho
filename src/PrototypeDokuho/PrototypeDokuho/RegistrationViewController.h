@@ -15,11 +15,11 @@
 
 @property (strong, nonatomic) UIImageView *displayImageView;
 
-@property (strong, nonatomic) UIButton *startDateAtScheduledTaskButton;
+@property (strong, nonatomic) UIButton *startDateButton;
 
-@property (strong, nonatomic) UITextField *memoAtScheduledTaskTextField;
+@property (strong, nonatomic) UITextField *memoTextField;
 
-@property (strong, nonatomic) UITextField *titleAtScheduledTaskTextField;
+@property (strong, nonatomic) UITextField *titleTextField;
 
 @property (strong, nonatomic) PicturedScheduledTask *picturedScheduledTask;
 

@@ -19,6 +19,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    // 画像読み込み方法を選択するアクションシートを表示するボタン
     [self.buttonSelectLoadImageWay addTarget:self
                           action:@selector(pushButtonSelectLoadImageWay:)
                 forControlEvents:UIControlEventTouchUpInside];
@@ -30,21 +31,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    switch (buttonIndex) {
-        case 0:
-            // １番目のボタンが押されたときの処理を記述する
-            [self openPicker:UIImagePickerControllerSourceTypeCamera];
-            break;
-        case 1:
-            // ２番目のボタンが押されたときの処理を記述する
-            [self openPicker:UIImagePickerControllerSourceTypePhotoLibrary];
-            break;
-        case 2:
-            [self.navigationController pushViewController:[RegistrationViewController.alloc init] animated:YES];
-            break;
-    }
-}
+#pragma mark - Event
 
 - (IBAction)pushButtonSelectLoadImageWay:(UIButton *)sender {
     UIActionSheet *selectLoadImageActionSheet = [UIActionSheet.alloc initWithTitle:@"画像の読み込み方法を選択してください"
@@ -55,6 +42,24 @@
     [selectLoadImageActionSheet showInView:self.view];
 }
 
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    switch (buttonIndex) {
+        case 0:
+            // 撮影
+            [self openPicker:UIImagePickerControllerSourceTypeCamera];
+            break;
+        case 1:
+            // カメラロール
+            [self openPicker:UIImagePickerControllerSourceTypePhotoLibrary];
+            break;
+        case 2:
+            // 画像無し
+            [self.navigationController pushViewController:[RegistrationViewController.alloc init] animated:YES];
+            break;
+    }
+}
+
+#pragma mark - Delegate(Picker)
 
 // camera起動
 // アラートの表示
@@ -66,7 +71,6 @@
                                         otherButtonTitles:nil];
     [alert show];
 }
-
 
 // イメージピッカーのオープン
 - (void)openPicker:(UIImagePickerControllerSourceType)sourceType {
@@ -85,7 +89,6 @@
     [self presentViewController:picker animated:YES completion:nil];
 }
 
-
 // イメージピッカーのイメージ取得時に呼ばれる
 - (void)imagePickerController:(UIImagePickerController *)picker
 didFinishPickingMediaWithInfo:(NSDictionary *)info {
@@ -101,7 +104,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
     [registrationViewController initializeDisplayImage:image];
     [self.navigationController pushViewController:registrationViewController animated:YES];
 }
-
 
 // イメージピッカーのキャンセル時に呼ばれる
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)pickerCtl {

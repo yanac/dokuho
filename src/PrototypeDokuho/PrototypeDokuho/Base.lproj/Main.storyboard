@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="yXe-Hz-wNp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="yXe-Hz-wNp">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Tb-Br-IXa"/>
                         <viewControllerLayoutGuide type="bottom" id="Ff7-fH-FLf"/>
@@ -53,28 +53,10 @@
             </objects>
             <point key="canvasLocation" x="952" y="146"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="SPy-px-1QD">
-            <objects>
-                <viewController id="41c-zY-wyk" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GPr-T9-jJY"/>
-                        <viewControllerLayoutGuide type="bottom" id="Q2T-Zq-gb3"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9e3-4Y-ISg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r9z-5H-k5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1939" y="146"/>
-        </scene>
         <!--Scheduled Tasks View Controller-->
         <scene sceneID="9hA-Ix-DSR">
             <objects>
-                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="GfT-2k-IkE" customClass="ScheduledTasksViewController" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="ScheduledTaskViewController" autoresizesArchivedViewToFullSize="NO" id="GfT-2k-IkE" customClass="ScheduledTasksViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="Xqf-jD-yvf" customClass="ScheduledTasksView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,7 +81,7 @@
         <!--Registration View Controller-->
         <scene sceneID="pDP-o0-doW">
             <objects>
-                <viewController id="78B-qh-8wF" customClass="RegistrationViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegistrationViewController" id="78B-qh-8wF" customClass="RegistrationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UuB-5a-I1J"/>
                         <viewControllerLayoutGuide type="bottom" id="alk-Kd-s8T"/>
@@ -117,7 +99,7 @@
         <!--Navigation Controller-->
         <scene sceneID="1Jv-xg-ijp">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yXe-Hz-wNp" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigatioinController" automaticallyAdjustsScrollViewInsets="NO" id="yXe-Hz-wNp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VeC-zm-QW3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
