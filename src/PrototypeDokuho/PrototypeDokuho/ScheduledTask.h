@@ -10,7 +10,7 @@
 
 @interface ScheduledTask : NSObject <NSCoding>
 
-@property (nonatomic) NSString *title;
+@property (nonatomic) NSString *taskTitle;
 
 @property (nonatomic) NSString *memo;
 

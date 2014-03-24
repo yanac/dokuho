@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ScheduledTasksViewController : UICollectionViewController
+@interface ScheduledTasksViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate>
 
 @end

@@ -13,76 +13,174 @@
 #import "UIImage+Resize.h"
 
 @interface ScheduledTasksViewController ()
+
 @property (nonatomic, strong) NSMutableArray *scheduledTaskThumbnails;
+@property (nonatomic, strong) NSMutableArray *stringItem;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) PicturedScheduledTask *selectedTask;
 
 @end
 
 @implementation ScheduledTasksViewController
 
-#pragma mark - Life Cycle
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
+- (void)viewDidLoad{
     
-    [self.collectionView registerClass:[ScheduledTaskViewCell class] forCellWithReuseIdentifier:@"MY_CELL"];
+    UIBarButtonItem *registButton = [UIBarButtonItem.alloc initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+                                                                          target:self
+                                                                          action:@selector(regist:)];
+    
+    
+    [self.navigationItem setRightBarButtonItem:registButton animated:YES];
 }
 
 // cell用画像の再読み込み
 - (void)viewWillAppear:(BOOL)animated {
     self.scheduledTaskThumbnails = [NSMutableArray array];
     self.scheduledTaskThumbnails = [ScheduledTaskManager.alloc getScheduledTasksThumbnail];
-    [self.collectionView reloadData];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.stringItem = [NSMutableArray array];
+    self.stringItem = [ScheduledTaskManager.alloc getScheduledTasksViewStringItem];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Delegate
+
 // セクション数の指定
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 // セクションに応じたセルの数を返す
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.scheduledTaskThumbnails.count;
 }
 
 // セルオブジェクトを返す
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    ScheduledTaskViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MY_CELL" forIndexPath:indexPath];
+    ScheduledTaskViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"MY_CELL"];
+    
+    if (!cell) {
+        cell = [ScheduledTaskViewCell.alloc initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MY_CELL"];
+    }
     
     UIImage *cellImage;
-    if ([self.scheduledTaskThumbnails[indexPath.item] isMemberOfClass:[UIImage class]] ) {
-        cellImage = self.scheduledTaskThumbnails[indexPath.item];
-    } else if ([self.scheduledTaskThumbnails[indexPath.item]  isEqual:@""]) {
-        cellImage = [[UIImage imageNamed:@"NOImage.jpg"] resizeIfOverSize:cell.imageView.frame.size];
+    UIImage *thumbnail = self.scheduledTaskThumbnails[indexPath.item];
+    if ([thumbnail isMemberOfClass:UIImage.class]) {
+        cellImage = thumbnail;
+    } else {
+        cellImage = [UIImage imageNamed:@"NOImage_thumb.jpg"];
     }
-    cell.imageView.image = cellImage;
+    
+    cell.taskImageView.image = cellImage;
+    
+    cell.taskTitleLabel.text = @"title";
+    cell.dateLabel.text = @"2012/12/12";
+    cell.taskTitleLabel.text = self.stringItem[indexPath.item][@"taskTitle"];
+    
+    NSDateFormatter *Formatter = [NSDateFormatter.alloc init];
+    [Formatter setDateFormat:@"yyyy/MM/dd HH:mm"];
+    cell.dateLabel.text = [Formatter stringFromDate:self.stringItem[indexPath.item][@"date"]];
     
     return cell;
 }
 
 // コレクションビューの選択を可能にする
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    RegistrationViewController *registrationViewController = [RegistrationViewController.alloc init];
-    registrationViewController.picturedScheduledTask = [ScheduledTaskManager.alloc getDecodedScheduledTasks][indexPath.item];
-    
-    [self.navigationController pushViewController:registrationViewController animated:YES];
-    
-    return YES;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    _selectedTask = [ScheduledTaskManager.alloc getDecodedScheduledTasks][indexPath.row];
+    [self performSegueWithIdentifier:@"registModal" sender:self];
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 120.0;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"registModal"]) {
+        RegistrationViewController *vc = segue.destinationViewController;
+        vc.picturedScheduledTask = _selectedTask;
+    }
+}
+
+
+- (void)regist:(id)sender {
+    UIActionSheet *selectLoadImageActionSheet = [UIActionSheet.alloc initWithTitle:@"画像の読み込み方法を選択してください"
+                                                                          delegate:self
+                                                                 cancelButtonTitle:@"キャンセル"
+                                                            destructiveButtonTitle:nil
+                                                                 otherButtonTitles:@"撮影", @"カメラロールから開く", @"画像なしで登録", nil];
+    [selectLoadImageActionSheet showInView:self.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    switch (buttonIndex) {
+        case 0:
+            // 撮影
+            [self openPicker:UIImagePickerControllerSourceTypeCamera];
+            break;
+        case 1:
+            // カメラロール
+            [self openPicker:UIImagePickerControllerSourceTypePhotoLibrary];
+            break;
+        case 2:
+            // 画像無し
+            [self performSegueWithIdentifier:@"registModal" sender:nil];
+            break;
+    }
+}
+
+#pragma mark - Delegate(Picker)
+
+// camera起動
+// アラートの表示
+- (void)showAlert:(NSString *)title text:(NSString *)text {
+    UIAlertView *alert = [UIAlertView.alloc initWithTitle:title
+                                                  message:text
+                                                 delegate:nil
+                                        cancelButtonTitle:@"OK"
+                                        otherButtonTitles:nil];
+    [alert show];
+}
+
+// イメージピッカーのオープン
+- (void)openPicker:(UIImagePickerControllerSourceType)sourceType {
+    // カメラとフォトアルバムの利用可能チェック
+    if (![UIImagePickerController isSourceTypeAvailable:sourceType]) {
+        [self showAlert:@"" text:@"利用できません"];
+        return;
+    }
+    
+    // イメージピッカー
+    UIImagePickerController *picker = [UIImagePickerController.alloc init];
+    picker.sourceType = sourceType;
+    picker.delegate = self;
+    
+    // ビューコントローラのビューを開く
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+// イメージピッカーのイメージ取得時に呼ばれる
+- (void)imagePickerController:(UIImagePickerController *)picker
+didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    // イメージの指定
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    // ビューコントローラのビューを閉じる
+    [picker.presentingViewController dismissViewControllerAnimated:YES completion:^{
+        
+        _selectedTask = [PicturedScheduledTask.alloc init];
+        _selectedTask.picture = image;
+        
+        // 登録画面に撮影した写真を渡して画面遷移する
+        [self performSegueWithIdentifier:@"registModal" sender:nil];
+    }];
+}
+
+// イメージピッカーのキャンセル時に呼ばれる
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)pickerCtl {
+    // ビューコントローラのビューを閉じる
+    [[pickerCtl presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 @end

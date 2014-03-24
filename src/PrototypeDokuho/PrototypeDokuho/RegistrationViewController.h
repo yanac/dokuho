@@ -9,27 +9,21 @@
 #import <UIKit/UIKit.h>
 #import "PicturedScheduledTask.h"
 
-@interface RegistrationViewController : UIViewController <UIActionSheetDelegate, UITextFieldDelegate> {
+@interface RegistrationViewController : UIViewController <UIActionSheetDelegate, UITextFieldDelegate, UITextViewDelegate> {
     UIActionSheet *actionSheet;
 }
 
-@property (strong, nonatomic) UIImageView *displayImageView;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 
-@property (strong, nonatomic) UIButton *startDateButton;
+@property (weak, nonatomic) IBOutlet UIImageView *displayImageView;
 
-@property (strong, nonatomic) UITextField *memoTextField;
+@property (weak, nonatomic) IBOutlet UIButton *startDateButton;
 
-@property (strong, nonatomic) UITextField *titleTextField;
+@property (weak, nonatomic) IBOutlet UITextView *memoTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 
 @property (strong, nonatomic) PicturedScheduledTask *picturedScheduledTask;
-
-- (void)initializeDisplayImage:(UIImage *)image;
-
-- (NSString *)getNowDateString;
-
-- (NSString *)getStringWithDate:(NSDate *)date;
-
-- (NSDate *)getDateWithString:(NSString *)string;
 
 @end
 

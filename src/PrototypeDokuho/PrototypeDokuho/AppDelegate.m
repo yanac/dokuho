@@ -7,12 +7,21 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+
+#import "Constants.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [UINavigationBar appearance].barTintColor = UIColorFromRGB(0x5bb69a);
+    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
+    [[UINavigationBar appearance] setTitleTextAttributes: @{
+                                                            NSForegroundColorAttributeName: [UIColor whiteColor],
+                                                            NSFontAttributeName: [UIFont fontWithName:@"Futura-Medium" size:20.0f],
+                                                            }];
+    
     return YES;
 }
 							

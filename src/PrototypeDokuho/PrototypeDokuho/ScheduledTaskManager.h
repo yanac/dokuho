@@ -23,4 +23,6 @@
 
 - (NSMutableArray *)getScheduledTasksThumbnail;
 
+- (NSMutableArray *)getScheduledTasksViewStringItem;
+
 @end
