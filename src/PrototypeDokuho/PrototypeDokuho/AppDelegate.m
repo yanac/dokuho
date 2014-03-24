@@ -13,8 +13,16 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    /*
+    [save setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"Futura-Medium" size:15.0f], NSFontAttributeName, nil] forState:UIControlStateNormal];
+    */
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{
+                                                           NSForegroundColorAttributeName: [UIColor whiteColor],
+                                                           NSFontAttributeName: [UIFont fontWithName:@"Futura-Medium" size:15.0f],
+                                                           }
+                                                forState:UIControlStateNormal];
+    
     [UINavigationBar appearance].barTintColor = UIColorFromRGB(0x5bb69a);
     [UINavigationBar appearance].tintColor = [UIColor whiteColor];
     [[UINavigationBar appearance] setTitleTextAttributes: @{

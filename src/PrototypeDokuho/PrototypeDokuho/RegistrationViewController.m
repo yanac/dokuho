@@ -56,12 +56,48 @@
     } else if (self.picturedScheduledTask.picture) {
         self.displayImageView.image = self.picturedScheduledTask.picture;
     }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardDidShow:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardDidHide:)
+                                                 name:UIKeyboardDidHideNotification
+                                               object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    // 通知の受け取りを登録解除する
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)keyboardDidShow:(NSNotification *)notification
+{
+    CGPoint scrollPoint = CGPointMake(0.0f,245.0f);
+    [self.scrollView setContentOffset:scrollPoint animated:YES];
+}
+
+- (void)keyboardDidHide:(NSNotification *)notification
+{
+    [self.scrollView setContentOffset:CGPointZero animated:YES];
 }
 
 #pragma mark - Delegate
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     return YES;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    self.titleTextField.backgroundColor = [UIColor colorWithRed:0.96 green:0.95 blue:0.95 alpha:1.0];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    self.titleTextField.backgroundColor = [UIColor clearColor];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -73,12 +109,20 @@
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-    
+
     if ([text isEqualToString:@"\n"]) {
         [textView resignFirstResponder];
         return NO;
     }
     return YES;
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    self.memoTextField.backgroundColor = [UIColor colorWithRed:0.96 green:0.95 blue:0.95 alpha:1.0];
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView {
+    self.memoTextField.backgroundColor = [UIColor clearColor];
 }
 
 #pragma mark - Event
@@ -110,6 +154,11 @@
     task.memo = self.memoTextField.text;
     task.taskTitle = self.titleTextField.text;
     task.date = [self getDateWithString:self.startDateButton.titleLabel.text];
+    
+    if ([task.taskTitle isEqual:nil] || [task.taskTitle  isEqual: @""]) {
+        task.taskTitle = @"NonTitle";
+    }
+    
     
     // fileNameが存在してるなら上書き保存 無いならfilenNameを日時分で保存
     if (self.picturedScheduledTask.fileName) {

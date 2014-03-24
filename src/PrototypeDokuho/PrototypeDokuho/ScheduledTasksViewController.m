@@ -12,6 +12,7 @@
 #import "RegistrationViewController.h"
 #import "UIImage+Resize.h"
 
+
 @interface ScheduledTasksViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -26,7 +27,7 @@
 
 - (void)viewDidLoad{
     
-    UIBarButtonItem *registButton = [UIBarButtonItem.alloc initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+    UIBarButtonItem *registButton = [UIBarButtonItem.alloc initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                                           target:self
                                                                           action:@selector(regist:)];
     
@@ -41,6 +42,8 @@
     self.stringItem = [NSMutableArray array];
     self.stringItem = [ScheduledTaskManager.alloc getScheduledTasksViewStringItem];
     [self.tableView reloadData];
+    
+    self.navigationItem.title = [NSString.alloc initWithFormat:@"%ld Tasks", (long)self.stringItem.count];
 }
 
 #pragma mark - Delegate
@@ -107,6 +110,7 @@
                                                                  cancelButtonTitle:@"キャンセル"
                                                             destructiveButtonTitle:nil
                                                                  otherButtonTitles:@"撮影", @"カメラロールから開く", @"画像なしで登録", nil];
+    
     [selectLoadImageActionSheet showInView:self.view];
 }
 
@@ -121,8 +125,10 @@
             [self openPicker:UIImagePickerControllerSourceTypePhotoLibrary];
             break;
         case 2:
-            // 画像無し
+        { // 画像無し _selectedTaskを初期化
+            _selectedTask = [PicturedScheduledTask.alloc init];
             [self performSegueWithIdentifier:@"registModal" sender:nil];
+        }
             break;
     }
 }
@@ -134,6 +140,8 @@
         [_stringItem removeObjectAtIndex:indexPath.row];
         [_scheduledTaskThumbnails removeObjectAtIndex:indexPath.row];
         [_tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+        self.navigationItem.title = [NSString.alloc initWithFormat:@"%ld Tasks", (long)self.stringItem.count];
     }
 }
 
