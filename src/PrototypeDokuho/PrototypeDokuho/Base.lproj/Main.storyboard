@@ -57,7 +57,7 @@
                                 <rect key="frame" x="17" y="85" width="286" height="214"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="猫を見つける" minimumFontSize="17" id="EyK-hg-dIG">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="タイトルを入力しよう" minimumFontSize="17" id="EyK-hg-dIG">
                                 <rect key="frame" x="20" y="320" width="280" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.14117647058823529" green="0.14901960784313725" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
@@ -79,7 +79,7 @@
                                     <action selector="pushDateButton:" destination="Ree-gi-gtT" eventType="touchUpInside" id="sxo-4Y-HVi"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="狭義にはネコ目（食肉目）- ネコ亜目- ネコ科- ネコ亜科- ネコ属に分類される小型哺乳類であるイエネコ（学名：Felis silvestris catus）の通称である。人間によくなつくためイヌと並ぶ代表的なペットとして世界中で広く飼われている。" id="aM7-Ob-f4D">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="aM7-Ob-f4D">
                                 <rect key="frame" x="17" y="399" width="283" height="149"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

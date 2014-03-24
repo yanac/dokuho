@@ -124,6 +124,7 @@
 		0C71E93418D04AA1009C7CF1 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				0C2384A918DEC62F00383C52 /* Constants.h */,
 				0C71E93818D04B2C009C7CF1 /* UIImage+Resize.h */,
 				0C71E93918D04B2C009C7CF1 /* UIImage+Resize.m */,
 			);
@@ -165,7 +166,6 @@
 		0CAD61D918583C0500178F04 /* PrototypeDokuho */ = {
 			isa = PBXGroup;
 			children = (
-				0C2384A918DEC62F00383C52 /* Constants.h */,
 				0C3FB1A618CC2849005856A6 /* Object */,
 				0CB4BC2918C45F5F0024EBFF /* View */,
 				0CB4BC2818C45F2E0024EBFF /* Controller */,
