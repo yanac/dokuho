@@ -14,6 +14,7 @@
 		0C3FB1A918CC2889005856A6 /* ScheduledTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3FB1A818CC2889005856A6 /* ScheduledTask.m */; };
 		0C3FB1AC18CC2949005856A6 /* PicturedScheduledTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3FB1AB18CC2949005856A6 /* PicturedScheduledTask.m */; };
 		0C6CFA5818CDDB3E0043C460 /* ScheduledTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6CFA5718CDDB3E0043C460 /* ScheduledTaskManager.m */; };
+		0C6E35FF18E0BBE3005CE6A4 /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6E35FE18E0BBE3005CE6A4 /* UIPlaceHolderTextView.m */; };
 		0C71E93A18D04B2C009C7CF1 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E93918D04B2C009C7CF1 /* UIImage+Resize.m */; };
 		0C835AE618CF3A960040333F /* NOImage@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C835AE518CF3A960040333F /* NOImage@2x.jpg */; };
 		0CAD61D418583C0500178F04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAD61D318583C0500178F04 /* Foundation.framework */; };
@@ -56,6 +57,8 @@
 		0C3FB1AB18CC2949005856A6 /* PicturedScheduledTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicturedScheduledTask.m; sourceTree = "<group>"; };
 		0C6CFA5618CDDB3E0043C460 /* ScheduledTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduledTaskManager.h; sourceTree = "<group>"; };
 		0C6CFA5718CDDB3E0043C460 /* ScheduledTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduledTaskManager.m; sourceTree = "<group>"; };
+		0C6E35FD18E0BBE3005CE6A4 /* UIPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPlaceHolderTextView.h; sourceTree = "<group>"; };
+		0C6E35FE18E0BBE3005CE6A4 /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPlaceHolderTextView.m; sourceTree = "<group>"; };
 		0C71E93818D04B2C009C7CF1 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 		0C71E93918D04B2C009C7CF1 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		0C835AE518CF3A960040333F /* NOImage@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "NOImage@2x.jpg"; sourceTree = "<group>"; };
@@ -119,6 +122,32 @@
 				0CB45CA518CEFF4B00EC82E4 /* Helper */,
 			);
 			name = Object;
+			sourceTree = "<group>";
+		};
+		0C6E35FB18E0BB34005CE6A4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0C2E1F0018BDE0B3001FC8F3 /* ScheduledTaskViewCell.h */,
+				0C2E1F0118BDE0B3001FC8F3 /* ScheduledTaskViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		0C6E360018E0BC2F005CE6A4 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				0C6E360118E0BC4E005CE6A4 /* Helper */,
+			);
+			name = Registration;
+			sourceTree = "<group>";
+		};
+		0C6E360118E0BC4E005CE6A4 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0C6E35FD18E0BBE3005CE6A4 /* UIPlaceHolderTextView.h */,
+				0C6E35FE18E0BBE3005CE6A4 /* UIPlaceHolderTextView.m */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 		0C71E93418D04AA1009C7CF1 /* Helper */ = {
@@ -238,6 +267,7 @@
 		0CB4BC2918C45F5F0024EBFF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C6E360018E0BC2F005CE6A4 /* Registration */,
 				0CB4BC2A18C45F6F0024EBFF /* ScheduledTasks */,
 			);
 			name = View;
@@ -248,8 +278,7 @@
 			children = (
 				0CAF134B185AF65E00BCCE83 /* ScheduledTasksView.h */,
 				0CAF134C185AF65E00BCCE83 /* ScheduledTasksView.m */,
-				0C2E1F0018BDE0B3001FC8F3 /* ScheduledTaskViewCell.h */,
-				0C2E1F0118BDE0B3001FC8F3 /* ScheduledTaskViewCell.m */,
+				0C6E35FB18E0BB34005CE6A4 /* Cell */,
 			);
 			name = ScheduledTasks;
 			sourceTree = "<group>";
@@ -418,6 +447,7 @@
 				0CAD61E018583C0500178F04 /* main.m in Sources */,
 				0CAF134D185AF65E00BCCE83 /* ScheduledTasksView.m in Sources */,
 				0C71E93A18D04B2C009C7CF1 /* UIImage+Resize.m in Sources */,
+				0C6E35FF18E0BBE3005CE6A4 /* UIPlaceHolderTextView.m in Sources */,
 				0C2E1F0218BDE0B3001FC8F3 /* ScheduledTaskViewCell.m in Sources */,
 				0CB4BC2E18C47F770024EBFF /* RegistrationViewController.m in Sources */,
 			);

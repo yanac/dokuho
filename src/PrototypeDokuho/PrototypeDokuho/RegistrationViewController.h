@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PicturedScheduledTask.h"
+#import "UIPlaceHolderTextView.h"
 
 @interface RegistrationViewController : UIViewController <UIActionSheetDelegate, UITextFieldDelegate, UITextViewDelegate> {
     UIActionSheet *actionSheet;
@@ -19,7 +20,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *startDateButton;
 
-@property (weak, nonatomic) IBOutlet UITextView *memoTextField;
+@property (weak, nonatomic) IBOutlet UIPlaceHolderTextView *memoTextField;
 
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 

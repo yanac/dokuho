@@ -83,7 +83,7 @@
                                             <action selector="pushDateButton:" destination="Ree-gi-gtT" eventType="touchUpInside" id="sxo-4Y-HVi"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="a" id="aM7-Ob-f4D">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="aM7-Ob-f4D" customClass="UIPlaceHolderTextView">
                                         <rect key="frame" x="17" y="336" width="283" height="149"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
