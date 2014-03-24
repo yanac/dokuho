@@ -100,13 +100,23 @@
     
     for (PicturedScheduledTask *task in decodedScheduledTasks) {
             NSDictionary *stringItem = @{ @"taskTitle": task.taskTitle,
-                                          @"date": task.date };
+                                          @"date": task.date,
+                                          @"fileName": task.fileName };
             
             [stringItems addObject:stringItem];
     }
     return stringItems;
 }
 
+- (void)deleteScheduledTask:(NSString *)fileName {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *path = [paths[0] stringByAppendingString:[NSString stringWithFormat:@"/ScheduledTasks/%@",fileName]];
+    
+    if ([[NSFileManager defaultManager]fileExistsAtPath:path]) {
+        NSError* error;
+        [[NSFileManager defaultManager]removeItemAtPath:path error:&error];
+    }
+}
 
 
 @end

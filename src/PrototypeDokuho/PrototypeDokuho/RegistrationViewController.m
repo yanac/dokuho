@@ -48,6 +48,8 @@
         if ([self.picturedScheduledTask isMemberOfClass:[PicturedScheduledTask class]]) {
             self.displayImageView.image = self.picturedScheduledTask.picture;
         }
+    } else if (self.picturedScheduledTask.picture) {
+        self.displayImageView.image = self.picturedScheduledTask.picture;
     }
 }
 

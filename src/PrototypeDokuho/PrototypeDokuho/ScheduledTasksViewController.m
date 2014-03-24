@@ -14,10 +14,11 @@
 
 @interface ScheduledTasksViewController ()
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *scheduledTaskThumbnails;
 @property (nonatomic, strong) NSMutableArray *stringItem;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) PicturedScheduledTask *selectedTask;
+
 
 @end
 
@@ -73,8 +74,6 @@
     
     cell.taskImageView.image = cellImage;
     
-    cell.taskTitleLabel.text = @"title";
-    cell.dateLabel.text = @"2012/12/12";
     cell.taskTitleLabel.text = self.stringItem[indexPath.item][@"taskTitle"];
     
     NSDateFormatter *Formatter = [NSDateFormatter.alloc init];
@@ -125,6 +124,16 @@
             // 画像無し
             [self performSegueWithIdentifier:@"registModal" sender:nil];
             break;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [ScheduledTaskManager.alloc deleteScheduledTask:self.stringItem[indexPath.row][@"fileName"]];
+        [_stringItem removeObjectAtIndex:indexPath.row];
+        [_scheduledTaskThumbnails removeObjectAtIndex:indexPath.row];
+        [_tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
 }
 

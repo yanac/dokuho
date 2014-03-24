@@ -25,4 +25,6 @@
 
 - (NSMutableArray *)getScheduledTasksViewStringItem;
 
+- (void)deleteScheduledTask:(NSString *)fileName;
+
 @end
