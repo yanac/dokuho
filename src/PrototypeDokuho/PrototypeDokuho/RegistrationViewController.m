@@ -30,7 +30,12 @@
                                                                         target:self
                                                                         action:@selector(cancel:)];
     
-
+    { // Setting Button Font 
+        [cancel setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"Futura-Medium" size:15.0f], NSFontAttributeName, nil] forState:UIControlStateNormal];
+        
+        [save setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"Futura-Medium" size:15.0f], NSFontAttributeName, nil] forState:UIControlStateNormal];
+    }
+    
     [_navigationBar.topItem setRightBarButtonItem:save animated:YES];
     [_navigationBar.topItem setLeftBarButtonItem:cancel animated:YES];
     
