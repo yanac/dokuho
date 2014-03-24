@@ -23,6 +23,8 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+
 @property (strong, nonatomic) PicturedScheduledTask *picturedScheduledTask;
 
 @end
