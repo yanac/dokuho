@@ -8,6 +8,7 @@
 
 #import "PicturedScheduledTask.h"
 #import "UIImage+Resize.h"
+#import "Constants.h"
 
 @implementation PicturedScheduledTask
 
@@ -35,7 +36,7 @@
 }
 
 -(void)createThumbnail {
-    CGSize size = CGSizeMake(60, 60);
+    CGSize size = CGSizeMake(kThumbnailSize, kThumbnailSize);
     _thumbnail = [_picture resizeIfOverSize:size];
 }
 

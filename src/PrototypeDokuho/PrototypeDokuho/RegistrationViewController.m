@@ -11,111 +11,44 @@
 
 @interface RegistrationViewController ()
 
+@property (nonatomic, strong) UIDatePicker *datePicker;
+
 @end
 
 @implementation RegistrationViewController
-{
-    UIDatePicker *datePicker;
-}
-
-#pragma mark - Life Cycle
-
-- (id)init {
-    self = [super init];
-    if (self) {
-        
-    }
-    
-    return self;
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)initializeDisplayImage:(UIImage *)image {
-    [self initializeDisplayImageView];
-    self.displayImageView.image = image;
-}
-
-- (void)initializeDisplayImageView {
-    self.displayImageView = [UIImageView.alloc initWithFrame:CGRectMake(30, 75, 260, 280)];
-    self.displayImageView.contentMode = UIViewContentModeScaleAspectFill;
-    [self.displayImageView setClipsToBounds:YES];
-}
-
-- (void)loadView {    
-    self.view = [UIView.alloc init];
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    { // add ImageView
-        if (self.displayImageView.image == nil) {
-            [self initializeDisplayImage:[UIImage imageNamed:@"NOImage.jpg"]];
-        }
-        [self.view addSubview:self.displayImageView];
-    }
-    
-    { // Init Button (Date)
-        self.startDateButton = [UIButton.alloc initWithFrame:CGRectMake(50, 405, 220, 30)];
-        [self.startDateButton  setTitle:[self getNowDateString] forState:UIControlStateNormal];
-        self.startDateButton.backgroundColor = [UIColor cyanColor];
-        [self.view addSubview:self.startDateButton];
-    }
-    
-    { // Init TextField (Memo)
-        self.memoTextField = [UITextField.alloc initWithFrame:CGRectMake(50, 450, 220, 100)];
-        self.memoTextField.backgroundColor = [UIColor grayColor];
-        self.memoTextField.returnKeyType = UIReturnKeyDone;
-        [self.view addSubview:self.memoTextField];
-        self.memoTextField.delegate = self;
-    }
-    
-    { // Init TextField(Title)
-        self.titleTextField = [UITextField.alloc initWithFrame:CGRectMake(50, 365, 220, 30)];
-        self.titleTextField.backgroundColor = [UIColor grayColor];
-        self.titleTextField.returnKeyType = UIReturnKeyDone;
-        [self.view addSubview:self.titleTextField];
-        self.titleTextField.delegate = self;
-    }
-    
-    UIBarButtonItem *save = [UIBarButtonItem.alloc initWithBarButtonSystemItem:UIBarButtonSystemItemSave
-                                                                        target:self
-                                                                        action:@selector(save:)];
-    [self.navigationItem setRightBarButtonItem:save animated:YES];
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.startDateButton addTarget:self
-                        action:@selector(pushDateButton:)
-              forControlEvents:UIControlEventTouchUpInside];
+    [self.startDateButton setTitle:[self getNowDateString] forState:UIControlStateNormal];
+
+    UIBarButtonItem *save = [UIBarButtonItem.alloc initWithBarButtonSystemItem:UIBarButtonSystemItemSave
+                                                                        target:self
+                                                                        action:@selector(save:)];
+    
+    UIBarButtonItem *cancel = [UIBarButtonItem.alloc initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                                        target:self
+                                                                        action:@selector(cancel:)];
+    
+
+    [_navigationBar.topItem setRightBarButtonItem:save animated:YES];
+    [_navigationBar.topItem setLeftBarButtonItem:cancel animated:YES];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
     // self.picturedScheduledTaskが存在する場合
-    if (self.picturedScheduledTask) {
-        self.titleTextField.text = self.picturedScheduledTask.title;
+    if (self.picturedScheduledTask.fileName) {
+        self.titleTextField.text = self.picturedScheduledTask.taskTitle;
         self.memoTextField.text = self.picturedScheduledTask.memo;
-        self.startDateButton.titleLabel.text = [self getStringWithDate:self.picturedScheduledTask.date];
+        [self.startDateButton setTitle:[self getStringWithDate:self.picturedScheduledTask.date] forState:UIControlStateNormal];
+        
         if ([self.picturedScheduledTask isMemberOfClass:[PicturedScheduledTask class]]) {
             self.displayImageView.image = self.picturedScheduledTask.picture;
         }
     }
-	// Do any additional setup after loading the view.
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Delegate
@@ -132,11 +65,21 @@
     return YES;
 }
 
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    
+    if ([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    return YES;
+}
+
 #pragma mark - Event
 
 - (void)pushDoneButton:(id)sender {
     //dateを表示
-    self.startDateButton.titleLabel.text = [self getStringWithDate:datePicker.date];
+    // self.startDateButton.titleLabel.text = [self getStringWithDate:_datePicker.date]; -> modelに変えてから動かなかった
+    [self.startDateButton setTitle:[self getStringWithDate:_datePicker.date] forState:UIControlStateNormal];
     
 	//ピッカーをしまう
     [actionSheet dismissWithClickedButtonIndex:0 animated:YES];
@@ -158,17 +101,23 @@
     }
     
     task.memo = self.memoTextField.text;
-    task.title = self.titleTextField.text;
+    task.taskTitle = self.titleTextField.text;
     task.date = [self getDateWithString:self.startDateButton.titleLabel.text];
     
     // fileNameが存在してるなら上書き保存 無いならfilenNameを日時分で保存
     if (self.picturedScheduledTask.fileName) {
+        task.fileName = self.picturedScheduledTask.fileName;
         [ScheduledTaskManager.alloc saveScheduledTask:task fileName:self.picturedScheduledTask.fileName];
     } else {
         task.fileName = [self getNowDateAndTime];
         [ScheduledTaskManager.alloc saveScheduledTask:task fileName:task.fileName];
     }
-    [self.navigationController popViewControllerAnimated:YES];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)cancel:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)pushDateButton:(id)sender {
@@ -202,18 +151,16 @@
     
     [toolBar setItems:items animated:YES];
     
-    { // Init DatePicker
-        datePicker = [UIDatePicker.alloc initWithFrame:CGRectMake(0, 44, 320, 420)];
-        datePicker.backgroundColor = [UIColor whiteColor];
-        datePicker.date = [self getDateWithString:self.startDateButton.titleLabel.text];
-        [self.view addSubview:datePicker];
+    if (!_datePicker) { // Init DatePicker
+        _datePicker = [UIDatePicker.alloc initWithFrame:CGRectMake(0, 44, 320, 420)];
+        _datePicker.backgroundColor = [UIColor whiteColor];
+        _datePicker.date = [self getDateWithString:self.startDateButton.titleLabel.text];
     }
     
     [actionSheet addSubview:toolBar];
-    [actionSheet addSubview:datePicker];
+    [actionSheet addSubview:_datePicker];
     [actionSheet showInView:self.view];
     [actionSheet setBounds:CGRectMake(0, 0, 320, 480)];
-
 }
 
 - (void)createThumbnail:(ScheduledTask *)task {

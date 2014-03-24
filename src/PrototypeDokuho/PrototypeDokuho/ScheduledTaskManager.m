@@ -88,10 +88,25 @@
         if ([task isMemberOfClass:[PicturedScheduledTask class]]) {
             [thumbnails addObject:task.thumbnail];
         } else {
-            [thumbnails addObject:@""];
+            [thumbnails addObject:NSNull.null];
         }
     }
     return thumbnails;
 }
+
+- (NSMutableArray *)getScheduledTasksViewStringItem {
+    NSMutableArray *decodedScheduledTasks = [self getDecodedScheduledTasks];
+    NSMutableArray *stringItems = [NSMutableArray array];
+    
+    for (PicturedScheduledTask *task in decodedScheduledTasks) {
+            NSDictionary *stringItem = @{ @"taskTitle": task.taskTitle,
+                                          @"date": task.date };
+            
+            [stringItems addObject:stringItem];
+    }
+    return stringItems;
+}
+
+
 
 @end

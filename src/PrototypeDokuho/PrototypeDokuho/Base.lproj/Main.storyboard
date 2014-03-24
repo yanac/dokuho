@@ -1,100 +1,109 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="yXe-Hz-wNp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="yXe-Hz-wNp">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Scheduled Tasks View Controller-->
+        <scene sceneID="o8b-2F-XWk">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9Tb-Br-IXa"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ff7-fH-FLf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                <viewController id="pZw-Y8-2mM" customClass="ScheduledTasksViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MHh-Ng-iqP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OYZ-3B-D4D">
-                                <rect key="frame" x="0.0" y="17" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="Hgg-rG-Oyq"/>
-                                </items>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnF-8u-bf7">
-                                <rect key="frame" x="137" y="194" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="一覧">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="aR0-9G-fZ4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="GfT-2k-IkE" kind="push" id="aQI-NH-p74"/>
+                                    <outlet property="dataSource" destination="pZw-Y8-2mM" id="Rkc-I1-TXc"/>
+                                    <outlet property="delegate" destination="pZw-Y8-2mM" id="W7d-Lk-xSL"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZf-L5-S98">
-                                <rect key="frame" x="137" y="269" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="登録">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0QX-I7-L64"/>
+                    <navigationItem key="navigationItem" id="Sxl-9l-lof"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="buttonSelectLoadImageWay" destination="lZf-L5-S98" id="mR4-lQ-QEM"/>
+                        <outlet property="tableView" destination="aR0-9G-fZ4" id="JR9-P3-mfS"/>
+                        <outlet property="view" destination="MHh-Ng-iqP" id="nam-HT-kvT"/>
+                        <segue destination="Ree-gi-gtT" kind="modal" identifier="registModal" id="9wk-pg-UCy"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xTI-8n-cHt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="952" y="146"/>
-        </scene>
-        <!--Scheduled Tasks View Controller-->
-        <scene sceneID="9hA-Ix-DSR">
-            <objects>
-                <collectionViewController storyboardIdentifier="ScheduledTaskViewController" autoresizesArchivedViewToFullSize="NO" id="GfT-2k-IkE" customClass="ScheduledTasksViewController" sceneMemberID="viewController">
-                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="Xqf-jD-yvf" customClass="ScheduledTasksView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XAk-Zm-zNd">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells/>
-                        <connections>
-                            <outlet property="dataSource" destination="GfT-2k-IkE" id="g1y-2L-Nme"/>
-                            <outlet property="delegate" destination="GfT-2k-IkE" id="mcV-UA-y4q"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" id="Bcp-pW-Vck"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cvQ-hy-Phe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1446" y="146"/>
+            <point key="canvasLocation" x="995" y="146"/>
         </scene>
         <!--Registration View Controller-->
-        <scene sceneID="pDP-o0-doW">
+        <scene sceneID="QLE-GU-6ox">
             <objects>
-                <viewController storyboardIdentifier="RegistrationViewController" id="78B-qh-8wF" customClass="RegistrationViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UuB-5a-I1J"/>
-                        <viewControllerLayoutGuide type="bottom" id="alk-Kd-s8T"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CMU-ss-xBl">
+                <viewController id="Ree-gi-gtT" customClass="RegistrationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uZs-Pm-gST">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <navigationBar clipsSubviews="YES" contentMode="scaleToFill" id="3lW-Yy-Rlm">
+                                <rect key="frame" x="0.0" y="19" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="nLH-Yx-Y4g"/>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NOImage.jpg" id="cE2-JW-Wsk">
+                                <rect key="frame" x="17" y="85" width="286" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="猫を見つける" minimumFontSize="17" id="EyK-hg-dIG">
+                                <rect key="frame" x="20" y="320" width="280" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.14117647058823529" green="0.14901960784313725" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Ree-gi-gtT" id="5Mm-6U-1ft"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Dn9-rs-10c">
+                                <rect key="frame" x="17" y="361" width="121" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                <state key="normal" title="2014/03/03 14:00">
+                                    <color key="titleColor" red="0.58431372549019611" green="0.59999999999999998" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushDateButton:" destination="Ree-gi-gtT" eventType="touchUpInside" id="sxo-4Y-HVi"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="狭義にはネコ目（食肉目）- ネコ亜目- ネコ科- ネコ亜科- ネコ属に分類される小型哺乳類であるイエネコ（学名：Felis silvestris catus）の通称である。人間によくなつくためイヌと並ぶ代表的なペットとして世界中で広く飼われている。" id="aM7-Ob-f4D">
+                                <rect key="frame" x="17" y="399" width="283" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.14117647058823529" green="0.14901960784313725" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Ree-gi-gtT" id="VUu-pj-Bba"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.92156862745098034" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="displayImageView" destination="cE2-JW-Wsk" id="ERl-Uc-ixF"/>
+                        <outlet property="memoTextField" destination="aM7-Ob-f4D" id="f2S-2c-2f5"/>
+                        <outlet property="navigationBar" destination="3lW-Yy-Rlm" id="DWW-u8-ZSy"/>
+                        <outlet property="startDateButton" destination="Dn9-rs-10c" id="orK-Nj-EMm"/>
+                        <outlet property="titleTextField" destination="EyK-hg-dIG" id="5NZ-52-d3R"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="94L-if-VO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="11x-Jr-PsW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1446" y="858"/>
+            <point key="canvasLocation" x="1404" y="146"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Jv-xg-ijp">
@@ -107,7 +116,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="2zy-bA-gVF"/>
+                        <segue destination="pZw-Y8-2mM" kind="relationship" relationship="rootViewController" id="U1x-zr-TEw"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0yV-x1-Fgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -115,6 +124,9 @@
             <point key="canvasLocation" x="561" y="146"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NOImage.jpg" width="400" height="300"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

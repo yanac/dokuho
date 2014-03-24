@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0773E3D46EC1453187E01FF9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6961FB33A542D59FA3E5EC /* libPods.a */; };
+		0C2384AB18DED74400383C52 /* NOImage_thumb@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C2384AA18DED74400383C52 /* NOImage_thumb@2x.jpg */; };
 		0C2E1F0218BDE0B3001FC8F3 /* ScheduledTaskViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2E1F0118BDE0B3001FC8F3 /* ScheduledTaskViewCell.m */; };
 		0C2E1F0518BDE6FB001FC8F3 /* ScheduledTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2E1F0418BDE6FB001FC8F3 /* ScheduledTasksViewController.m */; };
 		0C3FB1A918CC2889005856A6 /* ScheduledTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3FB1A818CC2889005856A6 /* ScheduledTask.m */; };
 		0C3FB1AC18CC2949005856A6 /* PicturedScheduledTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3FB1AB18CC2949005856A6 /* PicturedScheduledTask.m */; };
 		0C6CFA5818CDDB3E0043C460 /* ScheduledTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6CFA5718CDDB3E0043C460 /* ScheduledTaskManager.m */; };
 		0C71E93A18D04B2C009C7CF1 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E93918D04B2C009C7CF1 /* UIImage+Resize.m */; };
-		0C835AE618CF3A960040333F /* NOImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C835AE518CF3A960040333F /* NOImage.jpg */; };
+		0C835AE618CF3A960040333F /* NOImage@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C835AE518CF3A960040333F /* NOImage@2x.jpg */; };
 		0CAD61D418583C0500178F04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAD61D318583C0500178F04 /* Foundation.framework */; };
 		0CAD61D618583C0500178F04 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAD61D518583C0500178F04 /* CoreGraphics.framework */; };
 		0CAD61D818583C0500178F04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAD61D718583C0500178F04 /* UIKit.framework */; };
@@ -22,7 +23,6 @@
 		0CAD61E018583C0500178F04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD61DF18583C0500178F04 /* main.m */; };
 		0CAD61E418583C0500178F04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD61E318583C0500178F04 /* AppDelegate.m */; };
 		0CAD61E718583C0500178F04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CAD61E518583C0500178F04 /* Main.storyboard */; };
-		0CAD61EA18583C0500178F04 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD61E918583C0500178F04 /* ViewController.m */; };
 		0CAD61EC18583C0500178F04 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CAD61EB18583C0500178F04 /* Images.xcassets */; };
 		0CAD61F318583C0500178F04 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAD61F218583C0500178F04 /* XCTest.framework */; };
 		0CAD61F418583C0500178F04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAD61D318583C0500178F04 /* Foundation.framework */; };
@@ -44,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C2384A918DEC62F00383C52 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ../Constants.h; sourceTree = "<group>"; };
+		0C2384AA18DED74400383C52 /* NOImage_thumb@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "NOImage_thumb@2x.jpg"; sourceTree = "<group>"; };
 		0C2E1F0018BDE0B3001FC8F3 /* ScheduledTaskViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduledTaskViewCell.h; sourceTree = "<group>"; };
 		0C2E1F0118BDE0B3001FC8F3 /* ScheduledTaskViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduledTaskViewCell.m; sourceTree = "<group>"; };
 		0C2E1F0318BDE6FB001FC8F3 /* ScheduledTasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduledTasksViewController.h; sourceTree = "<group>"; };
@@ -56,7 +58,7 @@
 		0C6CFA5718CDDB3E0043C460 /* ScheduledTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduledTaskManager.m; sourceTree = "<group>"; };
 		0C71E93818D04B2C009C7CF1 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 		0C71E93918D04B2C009C7CF1 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
-		0C835AE518CF3A960040333F /* NOImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NOImage.jpg; sourceTree = "<group>"; };
+		0C835AE518CF3A960040333F /* NOImage@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "NOImage@2x.jpg"; sourceTree = "<group>"; };
 		0CAD61D018583C0500178F04 /* PrototypeDokuho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrototypeDokuho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CAD61D318583C0500178F04 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0CAD61D518583C0500178F04 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -68,8 +70,6 @@
 		0CAD61E218583C0500178F04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0CAD61E318583C0500178F04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0CAD61E618583C0500178F04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0CAD61E818583C0500178F04 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0CAD61E918583C0500178F04 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0CAD61EB18583C0500178F04 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0CAD61F118583C0500178F04 /* PrototypeDokuhoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrototypeDokuhoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CAD61F218583C0500178F04 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -165,6 +165,7 @@
 		0CAD61D918583C0500178F04 /* PrototypeDokuho */ = {
 			isa = PBXGroup;
 			children = (
+				0C2384A918DEC62F00383C52 /* Constants.h */,
 				0C3FB1A618CC2849005856A6 /* Object */,
 				0CB4BC2918C45F5F0024EBFF /* View */,
 				0CB4BC2818C45F2E0024EBFF /* Controller */,
@@ -210,7 +211,8 @@
 		0CAF135E185B3B3D00BCCE83 /* NOImage */ = {
 			isa = PBXGroup;
 			children = (
-				0C835AE518CF3A960040333F /* NOImage.jpg */,
+				0C2384AA18DED74400383C52 /* NOImage_thumb@2x.jpg */,
+				0C835AE518CF3A960040333F /* NOImage@2x.jpg */,
 			);
 			name = NOImage;
 			sourceTree = "<group>";
@@ -229,8 +231,6 @@
 			children = (
 				0CB4BC2F18C47F830024EBFF /* Registration */,
 				0CB4BC2B18C45F810024EBFF /* ScheduledTasks */,
-				0CAD61E818583C0500178F04 /* ViewController.h */,
-				0CAD61E918583C0500178F04 /* ViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -356,8 +356,9 @@
 			files = (
 				0CAD61EC18583C0500178F04 /* Images.xcassets in Resources */,
 				0CAD61DE18583C0500178F04 /* InfoPlist.strings in Resources */,
-				0C835AE618CF3A960040333F /* NOImage.jpg in Resources */,
+				0C835AE618CF3A960040333F /* NOImage@2x.jpg in Resources */,
 				0CAD61E718583C0500178F04 /* Main.storyboard in Resources */,
+				0C2384AB18DED74400383C52 /* NOImage_thumb@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,7 +412,6 @@
 			files = (
 				0C3FB1A918CC2889005856A6 /* ScheduledTask.m in Sources */,
 				0C6CFA5818CDDB3E0043C460 /* ScheduledTaskManager.m in Sources */,
-				0CAD61EA18583C0500178F04 /* ViewController.m in Sources */,
 				0C2E1F0518BDE6FB001FC8F3 /* ScheduledTasksViewController.m in Sources */,
 				0CAD61E418583C0500178F04 /* AppDelegate.m in Sources */,
 				0C3FB1AC18CC2949005856A6 /* PicturedScheduledTask.m in Sources */,

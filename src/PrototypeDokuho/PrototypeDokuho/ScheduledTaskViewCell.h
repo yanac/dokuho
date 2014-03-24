@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ScheduledTaskViewCell : UICollectionViewCell
+@interface ScheduledTaskViewCell : UITableViewCell
 
-@property (nonatomic, weak) UIImageView *imageView;
+@property (nonatomic, strong) UIImageView *taskImageView;
+@property (nonatomic, strong) UILabel *taskTitleLabel;
+@property (nonatomic, strong) UILabel *dateLabel;
 
 @end
