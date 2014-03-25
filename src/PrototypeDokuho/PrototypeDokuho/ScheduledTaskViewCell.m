@@ -15,24 +15,21 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
     if (self) {
+        // サムネイル画像表示領域の設定
         _taskImageView = [UIImageView.alloc initWithFrame:CGRectMake(10, 15, kThumbnailSize, kThumbnailSize)];
         _taskImageView.contentMode = UIViewContentModeScaleAspectFill;
         _taskImageView.clipsToBounds = YES;
         
         [self.contentView addSubview:_taskImageView];
         
-        // TODO: _dateLabel つくる　フォント設定する
-        // [self.contentView addSubview:_asdfas]
+        // 日付表示のLabelを設定
         _dateLabel = [UILabel.alloc initWithFrame:CGRectMake(120, 65, 180, 27)];
         _dateLabel.font = [UIFont fontWithName:@"Futura-Medium" size:12.0f];
         _dateLabel.textColor = [UIColor colorWithRed:0.58 green:0.60 blue:0.59 alpha:1.0];
         
         [self.contentView addSubview:_dateLabel];
         
-        
-        
-        // TODO: taskTitleLabel　作る　フォント設定する
-        // [self.contentView addSubview:_asdfas]
+        // タイトル表示のLabelを設定
         _taskTitleLabel = [UILabel.alloc initWithFrame:CGRectMake(120, 34, 180, 27)];
         _taskTitleLabel.font = [UIFont fontWithName:@"HiraKakuProN-W6" size:17.0f];
         _taskTitleLabel.textColor = [UIColor colorWithRed:0.14 green:0.15 blue:0.15 alpha:1.0];

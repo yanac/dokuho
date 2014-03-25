@@ -20,7 +20,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 日付ボタンの値を初期化
     [self.startDateButton setTitle:[self getNowDateString] forState:UIControlStateNormal];
+    
+    // memoTextFieldの説明文を初期化
+    self.memoTextField.placeholder = @"ここにメモを記入しよう";
+    
 
     UIBarButtonItem *save = [UIBarButtonItem.alloc initWithBarButtonSystemItem:UIBarButtonSystemItemSave
                                                                         target:self
@@ -30,7 +35,7 @@
                                                                         target:self
                                                                         action:@selector(cancel:)];
     
-    { // Setting Button Font 
+    { // Setting Button Font
         [cancel setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"Futura-Medium" size:15.0f], NSFontAttributeName, nil] forState:UIControlStateNormal];
         
         [save setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"Futura-Medium" size:15.0f], NSFontAttributeName, nil] forState:UIControlStateNormal];

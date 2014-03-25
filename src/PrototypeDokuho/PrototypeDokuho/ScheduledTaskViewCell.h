@@ -11,7 +11,9 @@
 @interface ScheduledTaskViewCell : UITableViewCell
 
 @property (nonatomic, strong) UIImageView *taskImageView;
+
 @property (nonatomic, strong) UILabel *taskTitleLabel;
+
 @property (nonatomic, strong) UILabel *dateLabel;
 
 @end
